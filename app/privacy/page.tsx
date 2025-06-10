@@ -8,18 +8,21 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+    <div className="min-h-screen bg-gray-50 py-12 md:py-16">
+      <div className="container-max-w max-w-4xl">
+        {" "}
+        {/* Using container-max-w */}
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 border border-gray-100">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8 text-center">
             Privacy Policy
           </h1>
 
-          <div className="prose prose-lg max-w-none text-gray-600">
-            <p className="text-sm text-gray-500 mb-6">
+          <div className="prose prose-lg max-w-none text-gray-700">
+            {" "}
+            {/* Apply prose-lg and new text color */}
+            <p className="text-sm text-gray-500 mb-8 text-center">
               Last updated: June 10, 2024
             </p>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 1. Introduction
@@ -37,7 +40,6 @@ export default function PrivacyPolicy() {
                 please do not access our services.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 2. Information We Collect
@@ -79,7 +81,6 @@ export default function PrivacyPolicy() {
                 <li>Performance cookies to improve website speed</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 3. How We Use Your Information
@@ -96,7 +97,6 @@ export default function PrivacyPolicy() {
                 <li>Protecting against fraudulent or illegal activity</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 4. Information Sharing
@@ -125,7 +125,6 @@ export default function PrivacyPolicy() {
                 </li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 5. Data Security
@@ -147,7 +146,6 @@ export default function PrivacyPolicy() {
                 cannot guarantee absolute security.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 6. Your Rights and Choices
@@ -183,7 +181,6 @@ export default function PrivacyPolicy() {
                 privacy@cointrendsnews.com
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 7. Childrens Privacy
@@ -195,7 +192,6 @@ export default function PrivacyPolicy() {
                 child under 18, we will delete that information promptly.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 8. International Data Transfers
@@ -207,7 +203,6 @@ export default function PrivacyPolicy() {
                 you consent to such transfers.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 9. Third-Party Links
@@ -218,7 +213,6 @@ export default function PrivacyPolicy() {
                 sites. We encourage you to review their privacy policies.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 10. Changes to This Policy
@@ -230,7 +224,6 @@ export default function PrivacyPolicy() {
                 may provide additional notice via email.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 11. Contact Information
@@ -239,13 +232,18 @@ export default function PrivacyPolicy() {
                 If you have questions or concerns about this Privacy Policy,
                 please contact us at:
               </p>
-              <div className="bg-gray-50 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Coin Trends News</p>
-                <p>Email: privacy@cointrendsnews.com</p>
-                <p>Address: 46 Island Rd Phoenix, New York(NY), 13135</p>
+              <div className="bg-blue-50 p-6 rounded-lg mt-4 border border-blue-100">
+                {" "}
+                {/* Enhanced styling */}
+                <p className="font-semibold text-gray-900">Coin Trends News</p>
+                <p className="text-gray-700">
+                  Email: privacy@cointrendsnews.com
+                </p>
+                <p className="text-gray-700">
+                  Address: 46 Island Rd Phoenix, New York(NY), 13135
+                </p>
               </div>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 12. California Privacy Rights
@@ -256,7 +254,6 @@ export default function PrivacyPolicy() {
                 personal information is collected, used, shared, or sold.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 13. European Privacy Rights

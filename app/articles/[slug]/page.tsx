@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, CalendarDays, Mail, Tag, User } from "lucide-react";
 import { getArticleBySlug, getAllArticleSlugs } from "@/lib/articles";
 
 // Remove this interface:
@@ -101,45 +101,53 @@ export default async function ArticlePage({ params }: { params: Params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
+      <article className="container-max-w py-12 md:py-16">
         <Link
-          href="/"
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8"
+          href="/articles" // Link back to all articles page
+          className="inline-flex items-center text-blue-700 hover:text-blue-800 font-medium mb-8 transition-colors group"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
+          <ArrowLeft className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" />
+          Back to All Articles
         </Link>
 
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+        <header className="mb-10 text-center">
+          <div className="flex items-center justify-center gap-4 text-sm text-gray-600 mb-4">
+            <span className="article-badge bg-blue-100 text-blue-700 flex items-center gap-1.5">
+              <Tag className="w-4 h-4" />
               {article.category}
             </span>
-            <time dateTime={article.publishedAt}>
-              {new Date(article.publishedAt).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
+            <div className="flex items-center gap-1.5">
+              <CalendarDays className="w-4 h-4 text-gray-500" />
+              <time dateTime={article.publishedAt}>
+                {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </div>
           </div>
 
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
             {article.title}
           </h1>
 
-          <p className="text-xl text-gray-600 mb-6">{article.excerpt}</p>
+          <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-3xl mx-auto">
+            {article.excerpt}
+          </p>
 
-          <div className="text-sm text-gray-500">By {article.author}</div>
+          <div className="text-base font-semibold text-gray-600 flex items-center justify-center gap-2">
+            <User className="w-4 h-4 text-gray-500" /> By {article.author}
+          </div>
         </header>
 
         {article.image && (
-          <div className="relative h-96 mb-8 rounded-xl overflow-hidden">
+          <div className="relative h-72 md:h-96 w-full mb-10 rounded-xl overflow-hidden shadow-lg">
             <Image
               src={article.image}
               alt={article.title}
               fill
-              className="object-cover"
+              className="object-cover object-center"
               priority
               sizes="(max-width: 1280px) 100vw, 1280px"
             />
@@ -147,21 +155,21 @@ export default async function ArticlePage({ params }: { params: Params }) {
         )}
 
         <div
-          className="prose prose-lg max-w-none"
+          className="prose lg:prose-lg max-w-none mx-auto" // Apply prose styles from globals.css
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="bg-blue-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-600 mb-4">
-              Get the latest crypto insights delivered to your inbox daily.
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <div className="rounded-xl p-8 text-center shadow-md glass">
+            <h3 className="text-2xl font-bold mb-3 text-gray-900">
+              Never Miss an Update!
+            </h3>
+            <p className="text-lg text-gray-700 mb-6">
+              Get the latest crypto insights, market analysis, and exclusive
+              tips delivered straight to your inbox daily.
             </p>
-            <Link
-              href="/#newsletter"
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Subscribe to Newsletter
+            <Link href="/#newsletter" className="btn-primary text-lg">
+              <Mail className="w-5 h-5 mr-2" /> Subscribe to Our Newsletter
             </Link>
           </div>
         </div>

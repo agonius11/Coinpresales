@@ -9,48 +9,114 @@
   }
 
   body {
-    @apply text-gray-900 antialiased;
+    @apply font-sans text-gray-900 antialiased;
+    background-color: rgb(242, 208, 196); /* New body background color */
+  }
+
+  /* Custom font sizes for better hierarchy, if not using a specific font */
+  h1 {
+    @apply text-4xl md:text-5xl font-extrabold leading-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-bold leading-tight;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
   }
 }
 
 @layer components {
+  /* Enhance Prose Styles */
+  .prose {
+    @apply text-gray-700; /* Slightly darker text for better readability */
+  }
+
   .prose h1 {
-    @apply text-3xl font-bold mb-4;
+    @apply text-3xl md:text-4xl font-bold mb-4 mt-10 text-gray-900;
   }
 
   .prose h2 {
-    @apply text-2xl font-bold mb-3 mt-8;
+    @apply text-2xl md:text-3xl font-bold mb-3 mt-8 text-gray-900;
   }
 
   .prose h3 {
-    @apply text-xl font-bold mb-2 mt-6;
+    @apply text-xl md:text-2xl font-bold mb-2 mt-6 text-gray-900;
   }
 
   .prose p {
-    @apply mb-4 leading-relaxed;
+    @apply mb-4 leading-relaxed text-lg; /* Slightly larger text for articles */
   }
 
-  .prose ul {
-    @apply list-disc list-inside mb-4;
-  }
-
+  .prose ul,
   .prose ol {
-    @apply list-decimal list-inside mb-4;
+    @apply list-outside pl-6 mb-4; /* Indent lists properly */
+  }
+
+  .prose li {
+    @apply mb-2;
   }
 
   .prose a {
-    @apply text-blue-600 hover:text-blue-700 underline;
+    @apply text-blue-700 hover:text-blue-800 underline transition duration-200; /* New primary blue for links */
   }
 
   .prose blockquote {
-    @apply border-l-4 border-gray-300 pl-4 italic my-4;
+    @apply border-l-4 border-blue-300 pl-6 italic my-6 text-gray-800 bg-blue-50 py-3 px-4 rounded-r-lg; /* More prominent blockquote */
   }
 
   .prose code {
-    @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+    @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded-md text-base; /* Slightly larger code */
   }
 
   .prose pre {
-    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+    @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 shadow-inner; /* Darker pre for contrast */
+  }
+
+  /* Custom utility classes (if needed across components) */
+  .container-max-w {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-semibold bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-orange-500 border border-orange-500 font-semibold hover:bg-orange-50 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2;
+  }
+
+  .article-badge {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wide;
+  }
+
+  /* Hover effect for cards/clickable items */
+  .card-hover-effect {
+    @apply transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Liquid Glass Effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }

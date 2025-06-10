@@ -8,18 +8,21 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+    <div className="min-h-screen bg-gray-50 py-12 md:py-16">
+      <div className="container-max-w max-w-4xl">
+        {" "}
+        {/* Using container-max-w */}
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 border border-gray-100">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8 text-center">
             Terms of Service
           </h1>
 
-          <div className="prose prose-lg max-w-none text-gray-600">
-            <p className="text-sm text-gray-500 mb-6">
+          <div className="prose prose-lg max-w-none text-gray-700">
+            {" "}
+            {/* Apply prose-lg and new text color */}
+            <p className="text-sm text-gray-500 mb-8 text-center">
               Effective Date: June 20, 2024
             </p>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 1. Agreement to Terms
@@ -31,7 +34,6 @@ export default function TermsOfService() {
                 these terms, you do not have permission to access the Service.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 2. Description of Service
@@ -47,7 +49,6 @@ export default function TermsOfService() {
                 <li>Market analysis and commentary</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 3. User Accounts and Registration
@@ -66,7 +67,6 @@ export default function TermsOfService() {
                 </li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 4. Acceptable Use Policy
@@ -83,7 +83,6 @@ export default function TermsOfService() {
                 <li>Manipulate or interfere with the Services functionality</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 5. Content and Intellectual Property
@@ -116,13 +115,14 @@ export default function TermsOfService() {
                 license to use, reproduce, and distribute such content.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 6. Investment Disclaimer
               </h2>
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-                <p className="font-semibold text-yellow-800 mb-2">
+              <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-r-lg mb-6 shadow-sm">
+                {" "}
+                {/* Enhanced styling */}
+                <p className="font-bold text-lg text-yellow-800 mb-2">
                   IMPORTANT NOTICE:
                 </p>
                 <p className="text-yellow-700">
@@ -130,7 +130,7 @@ export default function TermsOfService() {
                   cryptocurrency markets for educational and informational
                   purposes only. Nothing on this website constitutes:
                 </p>
-                <ul className="list-disc pl-6 mt-2 text-yellow-700">
+                <ul className="list-disc pl-6 mt-3 text-yellow-700">
                   <li>Investment advice</li>
                   <li>Financial advice</li>
                   <li>Trading recommendations</li>
@@ -144,7 +144,6 @@ export default function TermsOfService() {
                 making investment decisions.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 7. Limitation of Liability
@@ -168,7 +167,6 @@ export default function TermsOfService() {
                 US IN THE PAST TWELVE MONTHS, OR $100, WHICHEVER IS LESS.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 8. Indemnification
@@ -186,7 +184,6 @@ export default function TermsOfService() {
                 <li>Any content you submit to the Service</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 9. Privacy
@@ -197,7 +194,6 @@ export default function TermsOfService() {
                 use, and protect your information.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 10. Third-Party Links and Services
@@ -212,7 +208,6 @@ export default function TermsOfService() {
                 <li>Any damages resulting from third-party services</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 11. Modifications to Service
@@ -225,7 +220,6 @@ export default function TermsOfService() {
                 <li>Update content without notice</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 12. Termination
@@ -241,7 +235,6 @@ export default function TermsOfService() {
                 <li>Extended periods of inactivity</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 13. Governing Law
@@ -253,7 +246,6 @@ export default function TermsOfService() {
                 resolved in the courts of New York.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 14. Severability
@@ -265,7 +257,6 @@ export default function TermsOfService() {
                 remain in full effect.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 15. Entire Agreement
@@ -276,7 +267,6 @@ export default function TermsOfService() {
                 prior agreements.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 16. Changes to Terms
@@ -295,7 +285,6 @@ export default function TermsOfService() {
                 acceptance of the modified Terms.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 17. Contact Information
@@ -304,10 +293,14 @@ export default function TermsOfService() {
                 For questions about these Terms of Service, please contact us
                 at:
               </p>
-              <div className="bg-gray-50 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Coin Trends News</p>
-                <p>Email: legal@cointrendsnews.com</p>
-                <p>Address: 46 Island Rd Phoenix, New York(NY), 13135</p>
+              <div className="bg-blue-50 p-6 rounded-lg mt-4 border border-blue-100">
+                {" "}
+                {/* Enhanced styling */}
+                <p className="font-semibold text-gray-900">Coin Trends News</p>
+                <p className="text-gray-700">Email: legal@cointrendsnews.com</p>
+                <p className="text-gray-700">
+                  Address: 46 Island Rd Phoenix, New York(NY), 13135
+                </p>
               </div>
             </section>
           </div>
