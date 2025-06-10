@@ -35,10 +35,12 @@ export default function NewsletterSection() {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");
       }
-    } catch (error: any) {
+      /* eslint-disable @typescript-eslint/no-explicit-any */
+    } catch (error: unknown) {
       setStatus("error");
-      setMessage(error || "Network error. Please try again.");
+      setMessage("Network error. Please try again.");
     }
+    /* eslint-enable @typescript-eslint/no-explicit-any */
 
     // Reset status after 5 seconds
     setTimeout(() => {
