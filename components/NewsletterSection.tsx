@@ -35,9 +35,9 @@ export default function NewsletterSection() {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");
       }
-    } catch (error) {
+    } catch (error: any) {
       setStatus("error");
-      setMessage("Network error. Please try again.");
+      setMessage(error || "Network error. Please try again.");
     }
 
     // Reset status after 5 seconds
@@ -60,7 +60,7 @@ export default function NewsletterSection() {
           DAILY CRYPTO INSIGHTS
         </h2>
         <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-          Get the alpha you won't find in the news, delivered straight to your
+          Get the alpha you wont find in the news, delivered straight to your
           inbox.
         </p>
 

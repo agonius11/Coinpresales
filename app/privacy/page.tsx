@@ -25,9 +25,9 @@ export default function PrivacyPolicy() {
                 1. Introduction
               </h2>
               <p>
-                Welcome to Coin Trends News ("we," "our," or "us"). We are
-                committed to protecting your personal information and your right
-                to privacy. This Privacy Policy explains how we collect, use,
+                Welcome to Coin Trends News (we, our, or us). We are committed
+                to protecting your personal information and your right to
+                privacy. This Privacy Policy explains how we collect, use,
                 disclose, and safeguard your information when you visit our
                 website and subscribe to our newsletter.
               </p>
@@ -186,7 +186,7 @@ export default function PrivacyPolicy() {
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                7. Children's Privacy
+                7. Childrens Privacy
               </h2>
               <p>
                 Our services are not intended for individuals under the age of
@@ -226,8 +226,8 @@ export default function PrivacyPolicy() {
               <p>
                 We may update this Privacy Policy from time to time. We will
                 notify you of any changes by posting the new policy on this page
-                and updating the "Last updated" date. For significant changes,
-                we may provide additional notice via email.
+                and updating the Last updated date. For significant changes, we
+                may provide additional notice via email.
               </p>
             </section>
 

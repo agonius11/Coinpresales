@@ -25,11 +25,10 @@ export default function TermsOfService() {
                 1. Agreement to Terms
               </h2>
               <p>
-                By accessing or using Coin Trends News ("Service"), operated by
-                Coin Trends News ("we," "us," or "our"), you agree to be bound
-                by these Terms of Service ("Terms"). If you disagree with any
-                part of these terms, you do not have permission to access the
-                Service.
+                By accessing or using Coin Trends News (Service), operated by
+                Coin Trends News (we, us, or our), you agree to be bound by
+                these Terms of Service (Terms). If you disagree with any part of
+                these terms, you do not have permission to access the Service.
               </p>
             </section>
 
@@ -81,9 +80,7 @@ export default function TermsOfService() {
                 <li>Harass, abuse, or harm other users</li>
                 <li>Attempt to gain unauthorized access to our systems</li>
                 <li>Use the Service for illegal financial activities</li>
-                <li>
-                  Manipulate or interfere with the Service's functionality
-                </li>
+                <li>Manipulate or interfere with the Services functionality</li>
               </ul>
             </section>
 
@@ -290,7 +287,7 @@ export default function TermsOfService() {
               </p>
               <ul className="list-disc pl-6">
                 <li>Posting the updated Terms on our website</li>
-                <li>Updating the "Effective Date" at the top</li>
+                <li>Updating the Effective Date at the top</li>
                 <li>Sending an email notification for significant changes</li>
               </ul>
               <p className="mt-4">
