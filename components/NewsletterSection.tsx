@@ -35,12 +35,18 @@ export default function NewsletterSection() {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");
       }
-      /* eslint-disable @typescript-eslint/no-explicit-any */
     } catch (error: unknown) {
       setStatus("error");
-      setMessage("Network error. Please try again.");
+      if (error instanceof Error) {
+        // Use the error message from the caught error
+        setMessage(error.message || "Network error. Please try again.");
+      } else {
+        // Fallback for non-Error types or if message is empty
+        setMessage("An unexpected error occurred. Please try again.");
+      }
+      // Optionally, log the error for debugging
+      console.error("Fetch error:", error);
     }
-    /* eslint-enable @typescript-eslint/no-explicit-any */
 
     // Reset status after 5 seconds
     setTimeout(() => {
