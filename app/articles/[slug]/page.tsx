@@ -5,19 +5,30 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { getArticleBySlug, getAllArticleSlugs } from "@/lib/articles";
 
+// Remove this interface:
+// interface ArticlePageProps {
+//   params: {
+//     slug: string;
+//   };
+// }
+
+type Params = Promise<{ slug: string }>;
+
 export async function generateStaticParams() {
   const slugs = await getAllArticleSlugs();
   return slugs.map((slug) => ({
-    slug: slug,
+    slug,
   }));
 }
 
+// Update the type of params directly in generateMetadata
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Params;
 }): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     return {
@@ -52,12 +63,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function ArticlePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const article = await getArticleBySlug(params.slug);
+// Update the type of params directly in the default export function
+export default async function ArticlePage({ params }: { params: Params }) {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     notFound();
