@@ -1,5 +1,4 @@
-import HeroSection from "@/components/HeroSection"; // Renamed import
-import FeaturedArticle from "@/components/FeaturedArticle";
+import HeroSection from "@/components/HeroSection";
 import ArticleCard from "@/components/ArticleCard";
 import FeatureSection from "@/components/FeatureSection";
 import { getLatestArticles, getFeaturedArticle } from "@/lib/articles";
