@@ -1,54 +1,53 @@
 import Link from "next/link";
-import { Twitter, Linkedin, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-white py-12 md:py-16">
+    <footer className="bg-gray-950 text-white py-16 md:py-20 border-t border-gray-800">
       <div className="container-max-w">
-        <div className="grid md:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-4 gap-12">
+          {/* Brand Section */}
           <div className="md:col-span-2">
-            <h3 className="text-3xl font-extrabold mb-4 text-blue-50">
-              <span className="text-orange-700">COIN</span>TRENDS NEWS
+            <h3 className="text-3xl font-extrabold mb-6 text-white">
+              <span className="text-teal-400">COIN</span>TRENDS NEWS
             </h3>
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+            <p className="text-gray-400 text-lg leading-relaxed max-w-md mb-8">
               Your unfair advantage in crypto — daily unfiltered insights, news,
               and smart tips to always stay ahead of the game.
             </p>
           </div>
 
+          {/* Main Links */}
           <div>
-            <h4 className="font-bold text-xl mb-5 text-gray-200">
-              Quick Links
-            </h4>
-            <ul className="space-y-3 text-gray-400">
+            <h4 className="font-bold text-xl mb-6 text-white">Main</h4>
+            <ul className="space-y-4 text-gray-400">
               <li>
                 <Link
-                  href="/privacy"
-                  className="hover:text-blue-200 transition-colors"
+                  href="/"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
                 >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="hover:text-blue-200 transition-colors"
-                >
-                  Terms of Service
+                  Home
                 </Link>
               </li>
               <li>
                 <Link
                   href="/articles"
-                  className="hover:text-blue-200 transition-colors"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
                 >
                   All Articles
                 </Link>
               </li>
               <li>
                 <Link
+                  href="/#features"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#newsletter"
-                  className="hover:text-blue-200 transition-colors"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
                 >
                   Subscribe
                 </Link>
@@ -56,42 +55,74 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Utility Links */}
           <div>
-            <h4 className="font-bold text-xl mb-5 text-gray-200">Follow Us</h4>
-            <div className="flex space-x-5">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-7 h-7" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-7 h-7" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-7 h-7" />
-              </a>
-            </div>
-            <div className="mt-8">
-              <h4 className="font-bold text-xl mb-3 text-gray-200">Contact</h4>
-              <p className="text-gray-400">46 Island Rd Phoenix, NY, 13135</p>
-              <p className="text-gray-400">info@cointrendsnews.com</p>
-            </div>
+            <h4 className="font-bold text-xl mb-6 text-white">Utility</h4>
+            <ul className="space-y-4 text-gray-400 mb-8">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                >
+                  Affiliate Disclosure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                >
+                  Sitemap
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-          <p>© 2025 Coin Trends News. All rights reserved.</p>
-          <p className="mt-2">Made with ❤️ for crypto insights.</p>
+        {/* Bottom Section */}
+        <div className="mt-16 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="text-center md:text-left">
+              <p className="text-gray-500 text-sm">
+                © 2025 Coin Trends News. All Rights Reserved.
+              </p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-gray-500 text-sm">
+                Designed & Developed By{" "}
+                <span className="text-teal-400 font-semibold">
+                  Coin Trends Team
+                </span>
+              </p>
+            </div>
+          </div>
+
+          {/* Additional footer info */}
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 text-xs max-w-4xl mx-auto leading-relaxed">
+              Disclaimer: The information provided on this website is for
+              educational and informational purposes only. It should not be
+              considered as financial or investment advice. Cryptocurrency
+              investments carry high risk, and you should conduct your own
+              research before making any investment decisions.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

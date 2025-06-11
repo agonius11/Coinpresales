@@ -7,37 +7,37 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Coin Trends News - Daily Crypto Insights & News",
+  title: "Coin Trends News - Daily Crypto Insights & Alpha",
   description:
     "Get the alpha you won't find in the news. Daily crypto insights, market analysis, and exclusive trading tips delivered to your inbox.",
   keywords:
-    "crypto news, cryptocurrency, bitcoin, ethereum, blockchain, crypto analysis, trading insights",
-  authors: [{ name: "cointrends news" }],
-  creator: "cointrends news",
+    "crypto news, cryptocurrency, bitcoin, ethereum, blockchain, crypto analysis, trading insights, daily alpha, crypto newsletter",
+  authors: [{ name: "Coin Trends News" }],
+  creator: "Coin Trends News",
   publisher: "Coin Trends News",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yoursite.com",
+    url: "https://cointrendsnews.com",
     siteName: "Coin Trends News",
-    title: "Coin Trends News - Daily Crypto Insights & News",
+    title: "Coin Trends News - Daily Crypto Insights & Alpha",
     description:
       "Get the alpha you won't find in the news. Daily crypto insights delivered to your inbox.",
     images: [
       {
-        url: "https://yoursite.com/og-image.jpg",
+        url: "https://cointrendsnews.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Coin Trends News",
+        alt: "Coin Trends News - Daily Crypto Alpha",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coin Trends News - Daily Crypto Insights & News",
+    title: "Coin Trends News - Daily Crypto Insights & Alpha",
     description: "Get the alpha you won't find in the news.",
-    images: ["https://yoursite.com/twitter-image.jpg"],
-    creator: "@Coin Trends News",
+    images: ["https://cointrendsnews.com/twitter-image.jpg"],
+    creator: "@CoinTrendsNews",
   },
   robots: {
     index: true,
@@ -63,11 +63,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+    <html lang="en" className="dark">
+      <body className={`${inter.className} bg-gray-900 text-white antialiased`}>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

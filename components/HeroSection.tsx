@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, CheckCircle, XCircle } from "lucide-react"; // Import more icons
+import { Mail, CheckCircle, XCircle } from "lucide-react";
 
 export default function HeroSection() {
-  // Renamed component
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -54,85 +53,77 @@ export default function HeroSection() {
 
   return (
     <section
-      id="newsletter" // Add ID for direct linking
-      className="bg-gradient-to-br from-teal-700 via-teal-500 to-green-300 text-white py-20 md:py-28 relative overflow-hidden"
+      id="newsletter"
+      className="relative py-20 md:py-32 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
+      }}
     >
-      {/* Background shapes/patterns for uniqueness */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-        <svg
-          className="absolute inset-0 w-full h-full"
-          fill="none"
-          viewBox="0 0 1440 600"
-        >
-          <circle
-            cx="100"
-            cy="200"
-            r="80"
-            fill="currentColor"
-            className="text-teal-400 blur-3xl opacity-30"
-          ></circle>
-          <circle
-            cx="1200"
-            cy="400"
-            r="120"
-            fill="currentColor"
-            className="text-green-400 blur-3xl opacity-30"
-          ></circle>
-          <polygon
-            points="720,50 900,250 540,250"
-            fill="currentColor"
-            className="text-teal-300 blur-3xl opacity-20"
-          ></polygon>
-        </svg>
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
+      {/* Animated grid pattern */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(20, 185, 185, 0.3) 1px, transparent 0)`,
+          backgroundSize: "40px 40px",
+        }}
+      ></div>
+
       <div className="container-max-w text-center relative z-10">
-        <div className="inline-flex items-center justify-center w-20 h-20 bg-teal-700/50 backdrop-blur-sm rounded-full mb-6 border border-teal-600">
-          <Mail className="w-10 h-10 text-white" />
+        {/* Icon with glow effect */}
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8 glass-strong glow-teal">
+          <Mail className="w-10 h-10 text-teal-400" />
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-5 leading-tight tracking-tight">
-          DAILY <span className="text-orange-400">ALPHA</span> DELIVERED
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+          <span className="text-white">DONT MISS OUR</span>
+          <br />
+          <span className="text-teal-400 glow-teal">DAILY ALPHA</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-10 text-white/80 max-w-3xl mx-auto leading-relaxed">
-          Unlock exclusive crypto insights, market analysis, and trading tips
-          you won&apos;t find anywhere else. Stay ahead of the curve.
+
+        <p className="text-xl md:text-2xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          Subscribe to our newsletter and never miss out on the latest crypto
+          insights, market analysis, and exclusive trading tips delivered
+          straight to your inbox.
         </p>
 
+        {/* Newsletter form */}
         <form
           onSubmit={handleSubmit}
-          className="max-w-xl mx-auto glass p-3 shadow-xl"
+          className="max-w-2xl mx-auto glass-strong p-4 shadow-2xl glow-teal"
         >
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address..."
-              className="flex-1 px-5 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white/80 backdrop-blur-sm border border-white/30"
+              placeholder="name@email.com"
+              className="flex-1 px-6 py-4 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400 bg-gray-800/80 backdrop-blur-sm border border-gray-700 focus:border-teal-400 transition-all duration-300"
               required
               disabled={status === "loading"}
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="btn-primary" // Use custom class
+              className="btn-primary px-8 py-4 text-lg font-semibold whitespace-nowrap"
             >
-              {status === "loading" ? (
-                "Subscribing..."
-              ) : (
-                <>
-                  <Mail className="w-5 h-5 mr-2" /> Become an Insider
-                </>
-              )}
+              {status === "loading" ? "Subscribing..." : "Subscribe"}
             </button>
           </div>
         </form>
 
+        {/* Status message */}
         {message && (
           <div
             className={`mt-6 text-base font-semibold flex items-center justify-center gap-2 ${
-              status === "success" ? "text-green-300" : "text-red-300"
+              status === "success" ? "text-teal-300" : "text-red-400"
             }`}
           >
             {status === "success" ? (
@@ -144,9 +135,27 @@ export default function HeroSection() {
           </div>
         )}
 
-        <p className="mt-6 text-sm text-white/70">
-          Free. No spam. Unsubscribe anytime. Daily reads take just 3 minutes.
+        <p className="mt-8 text-sm text-gray-400 max-w-2xl mx-auto">
+          Free forever. No spam. Unsubscribe anytime.
+          <br />
+          Join thousands of crypto enthusiasts who trust our daily insights.
         </p>
+
+        {/* Trust indicators */}
+        <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-gray-500 text-sm">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <span>10,000+ Subscribers</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <span>Daily Insights</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
+            <span>Expert Analysis</span>
+          </div>
+        </div>
       </div>
     </section>
   );

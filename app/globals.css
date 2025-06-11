@@ -9,11 +9,12 @@
   }
 
   body {
-    @apply font-sans text-gray-900 antialiased;
-    background-color: rgb(242, 208, 196); /* New body background color */
+    @apply font-sans text-gray-100 antialiased;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    min-height: 100vh;
   }
 
-  /* Custom font sizes for better hierarchy, if not using a specific font */
+  /* Custom font sizes for better hierarchy */
   h1 {
     @apply text-4xl md:text-5xl font-extrabold leading-tight;
   }
@@ -29,30 +30,30 @@
 }
 
 @layer components {
-  /* Enhance Prose Styles */
+  /* Enhanced Prose Styles for Dark Theme */
   .prose {
-    @apply text-gray-700; /* Slightly darker text for better readability */
+    @apply text-gray-300;
   }
 
   .prose h1 {
-    @apply text-3xl md:text-4xl font-bold mb-4 mt-10 text-gray-900;
+    @apply text-3xl md:text-4xl font-bold mb-4 mt-10 text-white;
   }
 
   .prose h2 {
-    @apply text-2xl md:text-3xl font-bold mb-3 mt-8 text-gray-900;
+    @apply text-2xl md:text-3xl font-bold mb-3 mt-8 text-white;
   }
 
   .prose h3 {
-    @apply text-xl md:text-2xl font-bold mb-2 mt-6 text-gray-900;
+    @apply text-xl md:text-2xl font-bold mb-2 mt-6 text-white;
   }
 
   .prose p {
-    @apply mb-4 leading-relaxed text-lg; /* Slightly larger text for articles */
+    @apply mb-4 leading-relaxed text-lg text-gray-300;
   }
 
   .prose ul,
   .prose ol {
-    @apply list-outside pl-6 mb-4; /* Indent lists properly */
+    @apply list-outside pl-6 mb-4;
   }
 
   .prose li {
@@ -60,22 +61,22 @@
   }
 
   .prose a {
-    @apply text-blue-700 hover:text-blue-800 underline transition duration-200; /* New primary blue for links */
+    @apply text-teal-400 hover:text-teal-300 underline transition duration-200;
   }
 
   .prose blockquote {
-    @apply border-l-4 border-blue-300 pl-6 italic my-6 text-gray-800 bg-blue-50 py-3 px-4 rounded-r-lg; /* More prominent blockquote */
+    @apply border-l-4 border-teal-400 pl-6 italic my-6 text-gray-300 bg-gray-800/50 py-3 px-4 rounded-r-lg;
   }
 
   .prose code {
-    @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded-md text-base; /* Slightly larger code */
+    @apply bg-gray-800 text-teal-300 px-1.5 py-0.5 rounded-md text-base;
   }
 
   .prose pre {
-    @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 shadow-inner; /* Darker pre for contrast */
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 shadow-inner border border-gray-700;
   }
 
-  /* Custom utility classes (if needed across components) */
+  /* Custom utility classes */
   .container-max-w {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -85,38 +86,109 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-semibold bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-gray-900 font-semibold bg-teal-400 hover:bg-teal-300 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-orange-500 border border-orange-500 font-semibold hover:bg-orange-50 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-teal-400 border border-teal-400 font-semibold hover:bg-teal-400 hover:text-gray-900 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900;
   }
 
   .article-badge {
     @apply inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wide;
   }
 
-  /* Hover effect for cards/clickable items */
+  /* Hover effect for cards */
   .card-hover-effect {
-    @apply transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl;
+    @apply transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl;
   }
 
-  /* Liquid Glass Effect */
+  /* Dark theme card styles */
+  .dark-card {
+    background: linear-gradient(
+      145deg,
+      rgba(30, 30, 30, 0.9),
+      rgba(20, 20, 20, 0.9)
+    );
+    border: 1px solid rgba(20, 185, 185, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  .dark-card:hover {
+    border-color: rgba(20, 185, 185, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(20, 185, 185, 0.3);
+  }
+
+  /* Liquid Glass Effect for Dark Theme */
   .glass {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(20, 20, 20, 0.7);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-strong {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 15, 15, 0.8);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(20, 185, 185, 0.2);
+  }
+
+  /* Category badges with different colors */
+  .badge-crypto {
+    @apply bg-teal-500 text-gray-900;
+  }
+
+  .badge-defi {
+    @apply bg-purple-500 text-white;
+  }
+
+  .badge-nft {
+    @apply bg-pink-500 text-white;
+  }
+
+  .badge-bitcoin {
+    @apply bg-orange-500 text-white;
+  }
+
+  .badge-ethereum {
+    @apply bg-blue-500 text-white;
+  }
+
+  .badge-trading {
+    @apply bg-green-500 text-white;
+  }
+
+  .badge-news {
+    @apply bg-red-500 text-white;
+  }
+
+  .badge-analysis {
+    @apply bg-indigo-500 text-white;
+  }
+
+  /* Glow effects */
+  .glow-teal {
+    box-shadow: 0 0 20px rgba(20, 185, 185, 0.3);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+  }
+
+  /* Featured article overlay */
+  .featured-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
   }
 }
