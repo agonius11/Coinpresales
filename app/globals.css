@@ -9,8 +9,8 @@
   }
 
   body {
-    @apply font-sans text-gray-100 antialiased;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    @apply font-sans text-gray-900 antialiased;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
     min-height: 100vh;
   }
 
@@ -30,25 +30,25 @@
 }
 
 @layer components {
-  /* Enhanced Prose Styles for Dark Theme */
+  /* Enhanced Prose Styles for Light Theme */
   .prose {
-    @apply text-gray-300;
+    @apply text-gray-700;
   }
 
   .prose h1 {
-    @apply text-3xl md:text-4xl font-bold mb-4 mt-10 text-white;
+    @apply text-3xl md:text-4xl font-bold mb-4 mt-10 text-gray-900;
   }
 
   .prose h2 {
-    @apply text-2xl md:text-3xl font-bold mb-3 mt-8 text-white;
+    @apply text-2xl md:text-3xl font-bold mb-3 mt-8 text-gray-900;
   }
 
   .prose h3 {
-    @apply text-xl md:text-2xl font-bold mb-2 mt-6 text-white;
+    @apply text-xl md:text-2xl font-bold mb-2 mt-6 text-gray-900;
   }
 
   .prose p {
-    @apply mb-4 leading-relaxed text-lg text-gray-300;
+    @apply mb-4 leading-relaxed text-lg text-gray-700;
   }
 
   .prose ul,
@@ -61,19 +61,19 @@
   }
 
   .prose a {
-    @apply text-teal-400 hover:text-teal-300 underline transition duration-200;
+    @apply text-teal-600 hover:text-teal-700 underline transition duration-200;
   }
 
   .prose blockquote {
-    @apply border-l-4 border-teal-400 pl-6 italic my-6 text-gray-300 bg-gray-800/50 py-3 px-4 rounded-r-lg;
+    @apply border-l-4 border-teal-400 pl-6 italic my-6 text-gray-700 bg-teal-50 py-3 px-4 rounded-r-lg;
   }
 
   .prose code {
-    @apply bg-gray-800 text-teal-300 px-1.5 py-0.5 rounded-md text-base;
+    @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded-md text-base;
   }
 
   .prose pre {
-    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 shadow-inner border border-gray-700;
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 shadow-inner border border-gray-200;
   }
 
   /* Custom utility classes */
@@ -86,11 +86,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-gray-900 font-semibold bg-teal-400 hover:bg-teal-300 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-semibold bg-teal-600 hover:bg-teal-700 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-teal-400 border border-teal-400 font-semibold hover:bg-teal-400 hover:text-gray-900 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900;
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-teal-600 border border-teal-600 font-semibold hover:bg-teal-600 hover:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white;
   }
 
   .article-badge {
@@ -102,47 +102,47 @@
     @apply transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl;
   }
 
-  /* Dark theme card styles */
-  .dark-card {
+  /* Light theme card styles */
+  .light-card {
     background: linear-gradient(
       145deg,
-      rgba(30, 30, 30, 0.9),
-      rgba(20, 20, 20, 0.9)
+      rgba(255, 255, 255, 0.9),
+      rgba(248, 250, 252, 0.9)
     );
-    border: 1px solid rgba(20, 185, 185, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(14, 165, 233, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
   }
 
-  .dark-card:hover {
-    border-color: rgba(20, 185, 185, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(20, 185, 185, 0.3);
+  .light-card:hover {
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(14, 165, 233, 0.2);
   }
 
-  /* Liquid Glass Effect for Dark Theme */
+  /* Liquid Glass Effect for Light Theme */
   .glass {
-    background: rgba(20, 20, 20, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .glass-strong {
-    background: rgba(15, 15, 15, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(20, 185, 185, 0.2);
+    border: 1px solid rgba(14, 165, 233, 0.2);
   }
 
   /* Category badges with different colors */
   .badge-crypto {
-    @apply bg-teal-500 text-gray-900;
+    @apply bg-teal-500 text-white;
   }
 
   .badge-defi {
@@ -173,22 +173,44 @@
     @apply bg-indigo-500 text-white;
   }
 
-  /* Glow effects */
+  /* Glow effects for light theme */
   .glow-teal {
-    box-shadow: 0 0 20px rgba(20, 185, 185, 0.3);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.15);
   }
 
   .glow-purple {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.15);
   }
 
   /* Featured article overlay */
   .featured-overlay {
     background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
       rgba(0, 0, 0, 0.1) 100%
+    );
+  }
+
+  /* Light theme specific gradients */
+  .light-gradient-bg {
+    background: linear-gradient(
+      135deg,
+      #f0f9ff 0%,
+      #e0f2fe 25%,
+      #f0fdfa 50%,
+      #f0fdf4 75%,
+      #fefce8 100%
+    );
+  }
+
+  .hero-light-bg {
+    background: linear-gradient(
+      135deg,
+      #0891b2 0%,
+      #0d9488 25%,
+      #059669 50%,
+      #0891b2 100%
     );
   }
 }

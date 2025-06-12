@@ -43,7 +43,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
   const badgeStyle = getBadgeStyle(article.category);
 
   return (
-    <article className="rounded-2xl overflow-hidden card-hover-effect dark-card group">
+    <article className="rounded-2xl overflow-hidden card-hover-effect light-card group">
       <Link href={`/articles/${article.slug}`} className="block">
         <div className="relative h-52 w-full overflow-hidden">
           <Image
@@ -53,8 +53,8 @@ export default function ArticleCard({ article }: ArticleCardProps) {
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          {/* Light overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
 
           {/* Category badge */}
           <span
@@ -65,18 +65,18 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         </div>
 
         <div className="p-6 md:p-7">
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-snug line-clamp-2 group-hover:text-teal-300 transition-colors duration-300">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug line-clamp-2 group-hover:text-teal-600 transition-colors duration-300">
             {article.title}
           </h3>
-          <p className="text-gray-300 mb-4 text-base line-clamp-3 leading-relaxed">
+          <p className="text-gray-600 mb-4 text-base line-clamp-3 leading-relaxed">
             {article.excerpt}
           </p>
-          <div className="flex justify-between items-center text-sm text-gray-400 mt-4 pt-4 border-t border-gray-700">
-            <span className="font-semibold text-gray-300">
+          <div className="flex justify-between items-center text-sm text-gray-500 mt-4 pt-4 border-t border-gray-200">
+            <span className="font-semibold text-gray-700">
               {article.author}
             </span>
             <div className="flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-teal-400" />
+              <Clock className="w-4 h-4 text-teal-500" />
               <span>{publishedDate}</span>
             </div>
           </div>

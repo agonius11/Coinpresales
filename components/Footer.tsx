@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-white py-16 md:py-20 border-t border-gray-800">
+    <footer className="bg-gray-900 text-white py-16 md:py-20 border-t border-gray-200">
       <div className="container-max-w">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand Section */}
@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className="text-3xl font-extrabold mb-6 text-white">
               <span className="text-teal-400">COIN</span>TRENDS NEWS
             </h3>
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md mb-8">
+            <p className="text-gray-300 text-lg leading-relaxed max-w-md mb-8">
               Your unfair advantage in crypto — daily unfiltered insights, news,
               and smart tips to always stay ahead of the game.
             </p>
