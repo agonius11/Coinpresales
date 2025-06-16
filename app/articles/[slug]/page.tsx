@@ -167,19 +167,6 @@ export default async function ArticlePage({ params }: { params: Params }) {
           </div>
         </header>
 
-        {article.image && (
-          <div className="relative h-72 md:h-96 w-full mb-12 rounded-2xl overflow-hidden shadow-2xl light-card">
-            <Image
-              src={article.image}
-              alt={article.title}
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-          </div>
-        )}
-
         <div className="max-w-4xl mx-auto">
           <div
             className="prose prose-lg max-w-none"

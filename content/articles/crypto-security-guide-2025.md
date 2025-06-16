@@ -5,13 +5,13 @@ author: "Coin Trends | Security Team"
 category: "Security"
 publishedAt: "2025-06-16"
 updatedAt: "2025-06-16"
-image: "/images/articles/usb.jpg"
+image: "/images/articles/lockkey.jpg"
 featured: false
 ---
 
 # Stay Safe Out There: Real-World Crypto Security Tips
 
-![Crypto Trading Setup](/images/articles/lock.jpg)
+![Crypto Trading Setup](/images/articles/lockkey.jpg)
 
 Alright, let's not sugar-coat this: the biggest threats in crypto don't come from the blockchain itself. It's not Bitcoin or Ethereum that'll mess you up. It's your phone, your laptop, that sketchy Wi-Fi you just connected to in a coffee shop. Basically, everything you use to access your crypto.
 
