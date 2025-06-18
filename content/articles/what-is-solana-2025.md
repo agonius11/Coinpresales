@@ -1,10 +1,10 @@
 ---
-title: "What is Solana? The High-Speed Blockchain Challenging Ethereum"
+title: "Solana, the Ethereum Killer ? A Beginner’s Guide"
 excerpt: "Discover how Solana's revolutionary Proof of History and fast transaction speeds are reshaping the crypto landscape and competing with Ethereum."
 author: "CoinTrends Team"
 publishedAt: "2025-06-17"
 category: "Analysis"
-image: "/images/articles/solana-first.jpg"
+image: "/images/articles/solana-one.jpg"
 featured: false
 ---
 
@@ -14,7 +14,7 @@ Solana is one of those crypto projects that gets people either very excited or d
 
 What Solana's team is trying to do is build a blockchain infrastructure that could actually support real-world businesses at scale. We're not talking about sending a token here and there. We're talking about powering apps that need to move fast, handle loads of data, and be ready for millions of users.
 
-![Crypto Trading Setup](/images/articles/solana-first.jpg)
+![Crypto Trading Setup](/images/articles/solana-one.jpg)
 
 ## How Does Solana Work?
 
@@ -28,7 +28,7 @@ On top of that, Solana integrates other tools like **Tower BFT** (a kind of upgr
 
 Now, what about fees? Well, here's one of Solana's strongest points. A single transaction costs about **$0.00025**. That means with one dollar, you can process thousands of transactions. Not bad, right? It makes Solana an ideal playground for microtransactions, high-frequency trading, or any app that writes constantly to the blockchain.
 
-![Crypto Trading Setup](/images/articles/solana-second.jpg)
+![Crypto Trading Setup](/images/articles/solana-two.jpg)
 The price of SOL since 2020 © CoinMarketCap.
 
 Of course, none of this tech matters if there's no use case for it. So what does SOL, the token, actually do?
@@ -53,7 +53,7 @@ If you're curious about what kind of apps live on Solana, here are a few worth c
 **Solstarter**: launchpad for new crypto projects
 **Phantom**: probably the slickest wallet to manage your SOL and dApps
 
-![Crypto Trading Setup](/images/articles/solana-third.jpg)
+![Crypto Trading Setup](/images/articles/solana-three.jpg)
 
 Raydium, the number one DEX on Solana © Raydium
 
@@ -81,7 +81,7 @@ That said, Ethereum has the advantage of maturity and decentralization. It's see
 
 Each of these chains, including Ethereum, Avalanche, Sui, and Aptos, has its own take on the blockchain trilemma: balancing decentralization, scalability, and security. Solana's bet is clear: go all-in on speed and low cost, even if it means leaning a bit more centralized (for now).
 
-![Crypto Trading Setup](/images/articles/solana-forth.jpg)
+![Crypto Trading Setup](/images/articles/solana-four.jpg)
 
 The blockchain trilemma © Seba Bank AG
 
