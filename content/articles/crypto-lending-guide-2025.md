@@ -1,7 +1,7 @@
 ---
 title: "Crypto Lending: Make Your Coins Work for You"
 excerpt: "Learn how to earn passive income by lending your crypto. Explore how it works, the risks, platforms, and smart ways to get started."
-author: "Coin Trends | DeFi Team"
+author: "Antoine Marin"
 category: "DeFi"
 publishedAt: "2025-06-17"
 updatedAt: "2025-06-17"

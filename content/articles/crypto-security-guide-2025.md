@@ -1,7 +1,7 @@
 ---
 title: "How to Actually Stay Safe in Crypto: Real Security Tips That Matter"
 excerpt: "Most crypto hacks happen because of simple mistakes, not the tech itself. Learn how to protect your wallet, your passwords, and your future wealth with real, human advice."
-author: "Coin Trends | Security Team"
+author: "Antoine Marin"
 category: "Security"
 publishedAt: "2025-06-16"
 updatedAt: "2025-06-16"

@@ -1,7 +1,7 @@
 ---
 title: "How Crypto Bridges Work: Moving Your Assets Across Chains"
 excerpt: "Discover how crypto bridges allow you to transfer assets across blockchains like Ethereum, Solana, or Avalanche. Learn how they work, why they matter, and the risks to watch out for."
-author: "CoinTrends Team"
+author: "Antoine Marin"
 publishedAt: "2025-06-18"
 category: "Guide"
 image: "/images/articles/crypto-bridge-one.jpg"

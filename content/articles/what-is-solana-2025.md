@@ -1,7 +1,7 @@
 ---
 title: "Solana, the Ethereum Killer ? A Beginner’s Guide"
 excerpt: "Discover how Solana's revolutionary Proof of History and fast transaction speeds are reshaping the crypto landscape and competing with Ethereum."
-author: "CoinTrends Team"
+author: "Antoine Marin"
 publishedAt: "2025-06-17"
 category: "Analysis"
 image: "/images/articles/solana-one.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "What's a Crypto Airdrop? Free Coins Explained (2025)"
 excerpt: "Ever dreamed of free crypto? Airdrops are like digital giveaways. Here's how they work, where to find them, and how to stay safe while hunting."
-author: "Coin Trends | Market Research"
+author: "Antoine Marin"
 category: "Education"
 publishedAt: "2025-06-15"
 updatedAt: "2025-06-15"
