@@ -35,6 +35,48 @@
     @apply text-gray-700;
   }
 
+  .prose img,
+  .prose p img,
+  .prose figure img,
+  .prose-lg img {
+    width: 100% !important;
+    max-width: 100% !important; /* Changed from 640px to 100% */
+    min-width: 100% !important; /* Changed to 100% */
+    height: 520px !important;
+    margin: 2rem auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    display: block !important;
+    object-fit: cover !important; /* This will help with aspect ratio */
+  }
+
+  /* Remove any container background that might be causing the orange color */
+  .prose figure,
+  .prose p {
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure the container doesn't limit image width */
+  .max-w-4xl .prose img,
+  .container-max-w .prose img {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Mobile responsiveness for images */
+  @media (max-width: 640px) {
+    .prose img,
+    .prose p img,
+    .prose figure img,
+    .prose-lg img {
+      min-width: 100% !important;
+      max-width: 100% !important;
+      height: 360px !important;
+    }
+  }
+
   .prose h1 {
     @apply text-3xl md:text-4xl font-bold mb-4 mt-10 text-gray-900;
   }
