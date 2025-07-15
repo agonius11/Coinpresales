@@ -183,6 +183,10 @@
   }
 
   /* Category badges with different colors */
+
+  .badge-presales {
+    @apply bg-orange-500 text-white;
+  }
   .badge-crypto {
     @apply bg-teal-500 text-white;
   }

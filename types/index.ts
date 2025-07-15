@@ -10,6 +10,7 @@ export interface Article {
   publishedAt: string;
   updatedAt: string;
   featured: boolean;
+  isSpecialPage?: boolean;
 }
 
 export interface NewsletterFormData {

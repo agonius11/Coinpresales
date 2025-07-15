@@ -12,7 +12,29 @@ if (!fs.existsSync(articlesDirectory)) {
   fs.mkdirSync(articlesDirectory, { recursive: true });
 }
 
+// Special landing page article - appears as a card but links to special page
+const specialLandingPageArticle: Article = {
+  id: "special-presales-2025",
+  title: "5 Best Crypto Presales to Buy Now — One Is Still Early",
+  slug: "best-crypto-presales-2025",
+  excerpt:
+    "Missed $PEPE, $WIF, or $JEET when they were under the radar? Each of these coins launched through a presale, pumped hard, and made early backers rich. But today, only one of them is still in presale — and it's turning heads fast.",
+  content: "", // Not used for this special page
+  author: "CoinTrends Research Team",
+  publishedAt: "2025-07-16",
+  updatedAt: "2025-07-16",
+  category: "Presales",
+  image: "/images/articles/crypto-presales.jpg",
+  featured: true,
+  isSpecialPage: true, // This flags it as a special page
+};
+
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
+  // Check if it's the special article first
+  if (slug === "best-crypto-presales-2025") {
+    return specialLandingPageArticle;
+  }
+
   try {
     const fullPath = path.join(articlesDirectory, `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -45,12 +67,15 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
 export async function getAllArticleSlugs(): Promise<string[]> {
   try {
     const fileNames = fs.readdirSync(articlesDirectory);
-    return fileNames
+    const markdownSlugs = fileNames
       .filter((fileName) => fileName.endsWith(".md"))
       .map((fileName) => fileName.replace(/\.md$/, ""));
+
+    // Add the special article slug
+    return ["best-crypto-presales-2025", ...markdownSlugs];
   } catch (error) {
     console.error("Error reading articles directory:", error);
-    return [];
+    return ["best-crypto-presales-2025"]; // Still return special article even if directory read fails
   }
 }
 
@@ -62,13 +87,23 @@ export async function getLatestArticles(
     slugs.map((slug) => getArticleBySlug(slug))
   );
 
-  return articles
-    .filter((article): article is Article => article !== null)
-    .sort(
-      (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    )
-    .slice(0, limit);
+  const validArticles = articles.filter(
+    (article): article is Article => article !== null
+  );
+
+  // Sort by date with special article always first
+  const sortedArticles = validArticles.sort((a, b) => {
+    // Special article always comes first
+    if (a.isSpecialPage && !b.isSpecialPage) return -1;
+    if (!a.isSpecialPage && b.isSpecialPage) return 1;
+
+    // Then sort by date
+    return (
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
+  });
+
+  return sortedArticles.slice(0, limit);
 }
 
 export async function getFeaturedArticle(): Promise<Article | null> {

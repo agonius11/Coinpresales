@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Article } from "@/types";
-import { Clock } from "lucide-react";
+import { Clock, Zap } from "lucide-react";
 import AuthorProfile from "./AuthorProfile";
 
 interface ArticleCardProps {
@@ -24,6 +24,7 @@ const getBadgeStyle = (category: string) => {
   if (categoryLower.includes("trading")) return "badge-trading";
   if (categoryLower.includes("news")) return "badge-news";
   if (categoryLower.includes("analysis")) return "badge-analysis";
+  if (categoryLower.includes("presales")) return "badge-presales";
   return "badge-crypto";
 };
 
@@ -39,11 +40,32 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
   const badgeStyle = getBadgeStyle(article.category);
 
+  // Determine the correct link path - special articles go to their own route
+  const linkPath = article.isSpecialPage
+    ? `/${article.slug}`
+    : `/articles/${article.slug}`;
+
   return (
-    <article className="rounded-2xl overflow-hidden card-hover-effect light-card group">
+    <article
+      className={`rounded-2xl overflow-hidden card-hover-effect light-card group ${
+        article.isSpecialPage
+          ? "ring-2 ring-orange-400 ring-opacity-60 shadow-xl"
+          : ""
+      }`}
+    >
       {/* Article content link */}
-      <Link href={`/articles/${article.slug}`} className="block">
+      <Link href={linkPath} className="block">
         <div className="relative h-52 w-full overflow-hidden">
+          {/* Special HOT badge for landing page */}
+          {article.isSpecialPage && (
+            <div className="absolute top-4 right-4 z-10">
+              <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 animate-pulse shadow-lg">
+                <Zap className="w-3 h-3" />
+                HOT
+              </span>
+            </div>
+          )}
+
           <Image
             src={article.image || "/images/placeholder.jpg"}
             alt={article.title}
@@ -53,7 +75,11 @@ export default function ArticleCard({ article }: ArticleCardProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
           <span
-            className={`article-badge absolute top-4 left-4 ${badgeStyle} rounded-full px-4 py-1.5 text-sm font-semibold shadow-lg`}
+            className={`article-badge absolute top-4 left-4 ${badgeStyle} rounded-full px-4 py-1.5 text-sm font-semibold shadow-lg ${
+              article.isSpecialPage
+                ? "bg-orange-500 text-white border-2 border-white"
+                : ""
+            }`}
           >
             {article.category}
           </span>
@@ -66,6 +92,16 @@ export default function ArticleCard({ article }: ArticleCardProps) {
           <p className="text-gray-600 mb-4 text-base line-clamp-3 leading-relaxed">
             {article.excerpt}
           </p>
+
+          {/* Special urgency message for landing page */}
+          {article.isSpecialPage && (
+            <div className="mb-4 p-3 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg border border-orange-200">
+              <p className="text-sm font-semibold text-orange-800 flex items-center gap-2">
+                <Zap className="w-4 h-4" />
+                Only 1 Presale Still Live — Don&apos;t Miss Out!
+              </p>
+            </div>
+          )}
         </div>
       </Link>
 
