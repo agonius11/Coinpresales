@@ -1,16 +1,17 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import AuthorProfile from "@/components/AuthorProfile";
 import {
   ArrowLeft,
   CheckCircle,
-  Clock,
   ExternalLink,
   TrendingUp,
   Zap,
   Shield,
   Brain,
   Users,
-  Target,
+  DollarSign,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -84,31 +85,43 @@ export default function Page() {
             </Link>
 
             {/* Author Box */}
-            <div className="glass p-6 rounded-2xl mb-8 text-center">
-              <div className="flex items-center justify-center gap-3 mb-2">
+            <div className="glass p-6 rounded-2xl mb-8">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-900 mb-1">
                     Research Team @ CoinTrends
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 mb-3">
                     Presale Intelligence & Market Analysis
                   </p>
+                  <AuthorProfile
+                    author="Antoine Marin"
+                    size="small"
+                    showModal={true}
+                  />
                 </div>
               </div>
             </div>
 
-            {/* Alert Banner */}
-            <div className="bg-red-500 text-white p-4 rounded-lg mb-8 text-center shadow-lg">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Clock className="w-5 h-5" />
-                <span className="font-bold">
-                  Only 1 Presale Still Open — Ends Soon!
+            {/* Hero Image */}
+            <div className="relative h-64 md:h-80 w-full mb-12 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/articles/five-cryptos.jpg"
+                alt="Best 5 Crypto Presales Comparison - DSNT, PEPE, WIF, JEET, LADYS"
+                fill
+                className="object-cover object-center"
+                priority
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  5 Best Crypto Presales Analysis
                 </span>
               </div>
-              <p className="text-sm">Ends in: 614.06.1.28m</p>
             </div>
 
             {/* Main Title */}
@@ -157,8 +170,17 @@ export default function Page() {
                 </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                1. $DSNT — DeepSnitch AI
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/images/articles/dslogo.png"
+                    alt="DeepSnitch AI Logo"
+                    width={48}
+                    height={48}
+                    className="rounded-lg"
+                  />
+                  <span>1. $DSNT — DeepSnitch AI</span>
+                </div>
                 <span className="block text-lg font-normal text-gray-600 mt-2">
                   (Best Crypto Presale of 2025)
                 </span>
@@ -215,10 +237,9 @@ export default function Page() {
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Target className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                    <DollarSign className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span>
-                      Designed to cut through blockchain noise for active
-                      traders
+                      💰 Current Price: $0.01510 — Listing Price: $0.0547
                     </span>
                   </div>
                 </div>
@@ -244,17 +265,13 @@ export default function Page() {
                       just like $ARKM did in 2023-24
                     </span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span>Stage 3 ends in 10 hours</span>
-                  </div>
                 </div>
               </div>
 
               {/* Main CTA for DSNT */}
               <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 rounded-2xl text-white text-center shadow-lg">
                 <h4 className="text-xl font-bold mb-3">
-                  🔥 Join the $DSNT Presale — Stage 3 Closing Soon
+                  🔥 Join the $DSNT Presale
                 </h4>
                 <p className="mb-4 text-orange-100">
                   $DSNT is what $PEPE was before it launched. But instead of
@@ -560,29 +577,82 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Final CTA */}
-            <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 p-8 rounded-3xl text-white text-center shadow-2xl">
-              <h3 className="text-3xl font-bold mb-4">
+            {/* Final CTA - UPDATED WITH DEEPSNITCH BRANDING */}
+            <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 p-8 rounded-3xl text-white text-center shadow-2xl relative overflow-hidden">
+              {/* Background Pattern/Decoration */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-4 left-4 w-16 h-16 border-2 border-white rounded-full"></div>
+                <div className="absolute top-12 right-8 w-12 h-12 border-2 border-white rounded-full"></div>
+                <div className="absolute bottom-8 left-12 w-20 h-20 border-2 border-white rounded-full"></div>
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-2 border-white rounded-full"></div>
+              </div>
+
+              {/* DeepSnitch Branding */}
+              <div className="relative z-10 mb-6">
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <Image
+                    src="/images/articles/deepsnitchlogo.svg"
+                    alt="DeepSnitch AI Logo"
+                    width={200}
+                    height={48}
+                    className="h-12 bg-white/20 px-4 py-2 rounded-lg"
+                  />
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-orange-200">
+                    AI-Powered Crypto Intelligence Platform
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-3xl font-bold mb-4 relative z-10">
                 If you missed $PEPE, $WIF, or $JEET…
               </h3>
-              <p className="text-xl mb-6 text-orange-100">
+              <p className="text-xl mb-6 text-orange-100 relative z-10">
                 You still have a shot with $DSNT. It&apos;s public, audited, and
                 gaining momentum — before the hype, before the CEX listings,
                 before the 10x.
               </p>
-              <p className="text-lg mb-8 text-orange-200">
+              <p className="text-lg mb-8 text-orange-200 relative z-10">
                 If you&apos;re looking for the next AI-driven breakout token,
                 $DSNT is the only one on this list still in that window.
               </p>
-              <Link
-                href="https://deepsnitch.ai/?utm_source=cointrendsnews&utm_medium=article&utm_campaign=5-best-crypto-presales&utm_term=final-cta"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-white text-orange-500 px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                👉 Join the $DSNT Presale Today{" "}
-                <ExternalLink className="w-6 h-6 ml-3" />
-              </Link>
+
+              {/* Enhanced CTA Button with Icons */}
+              <div className="relative z-10">
+                <Link
+                  href="https://deepsnitch.ai/?utm_source=cointrendsnews&utm_medium=article&utm_campaign=5-best-crypto-presales&utm_term=final-cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-white text-orange-500 px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg group"
+                >
+                  <Image
+                    src="/images/articles/dslogo.png"
+                    alt="DeepSnitch"
+                    width={24}
+                    height={24}
+                    className="mr-3 h-5"
+                  />
+                  Join the $DSNT Presale Today{" "}
+                  <ExternalLink className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                {/* Additional branding elements */}
+                <div className="mt-6 flex items-center justify-center gap-6 text-sm text-orange-200">
+                  <div className="flex items-center gap-1">
+                    <Shield className="w-4 h-4" />
+                    <span>Audited</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Brain className="w-4 h-4" />
+                    <span>AI-Powered</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <DollarSign className="w-4 h-4" />
+                    <span>$0.01510</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Newsletter CTA */}

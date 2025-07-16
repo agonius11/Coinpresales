@@ -259,4 +259,14 @@
       #0891b2 100%
     );
   }
+  [role="dialog"] {
+    z-index: 999999 !important;
+    position: fixed !important;
+  }
+
+  /* Ensure modal backdrop is also high */
+  .modal-backdrop {
+    z-index: 999998 !important;
+    position: fixed !important;
+  }
 }
