@@ -92,16 +92,6 @@ export default function ArticleCard({ article }: ArticleCardProps) {
           <p className="text-gray-600 mb-4 text-base line-clamp-3 leading-relaxed">
             {article.excerpt}
           </p>
-
-          {/* Special urgency message for landing page */}
-          {article.isSpecialPage && (
-            <div className="mb-4 p-3 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg border border-orange-200">
-              <p className="text-sm font-semibold text-orange-800 flex items-center gap-2">
-                <Zap className="w-4 h-4" />
-                Only 1 Presale Still Live — Don&apos;t Miss Out!
-              </p>
-            </div>
-          )}
         </div>
       </Link>
 

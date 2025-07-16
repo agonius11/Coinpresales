@@ -74,58 +74,18 @@ export default function Page() {
         style={{ backgroundColor: "rgba(255, 245, 238, 0.7)" }}
       >
         {/* Header Section */}
-        <section className="section-padding">
+        <section className="py-8 md:py-12">
           <div className="container-max-w">
             <Link
               href="/articles"
-              className="inline-flex items-center text-blue-700 hover:text-blue-800 font-medium mb-8 transition-colors group"
+              className="inline-flex items-center text-blue-700 hover:text-blue-800 font-medium mb-6 transition-colors group"
             >
               <ArrowLeft className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" />
               Back to All Articles
             </Link>
 
-            {/* Author Box */}
-            <div className="glass p-6 rounded-2xl mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 mb-1">
-                    Research Team @ CoinTrends
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3">
-                    Presale Intelligence & Market Analysis
-                  </p>
-                  <AuthorProfile
-                    author="Antoine Marin"
-                    size="small"
-                    showModal={true}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="relative h-64 md:h-80 w-full mb-12 rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/articles/five-cryptos.jpg"
-                alt="Best 5 Crypto Presales Comparison - DSNT, PEPE, WIF, JEET, LADYS"
-                fill
-                className="object-cover object-center"
-                priority
-                sizes="(max-width: 1280px) 100vw, 1280px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-                  5 Best Crypto Presales Analysis
-                </span>
-              </div>
-            </div>
-
             {/* Main Title */}
-            <header className="text-center mb-12">
+            <header className="text-center mb-8">
               <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 5 Best Crypto Presales to Buy Now —
                 <span className="text-orange-500"> One Is Still Early</span>
@@ -144,14 +104,32 @@ export default function Page() {
                 is still live.
               </p>
             </header>
+
+            {/* Hero Image  */}
+            <div className="relative h-80 md:h-96 lg:h-[28rem] w-full  rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/articles/best-crypto-presale.jpg"
+                alt="Best 5 Crypto Presales Comparison - DSNT, PEPE, WIF, JEET, LADYS"
+                fill
+                className="object-cover object-center"
+                priority
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  5 Best Crypto Presales Analysis
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Article Content */}
-        <section className="pb-16">
+        <section className="pb-8">
           <div className="container-max-w max-w-4xl">
             {/* Coin #1 - DSNT (Featured/Highlighted) */}
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200 rounded-3xl p-8 mb-12 shadow-xl">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-200 rounded-3xl p-8 mb-8 shadow-xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                   🔥 Top Pick
@@ -170,20 +148,20 @@ export default function Page() {
                 </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-4">
-                <div className="flex items-center gap-3">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <div className="flex items-center gap-3 mb-2">
                   <Image
-                    src="/images/articles/dslogo.png"
+                    src="/images/articles/deepsnitchlogo.svg"
                     alt="DeepSnitch AI Logo"
-                    width={48}
-                    height={48}
-                    className="rounded-lg"
+                    width={120}
+                    height={32}
+                    className="h-8"
                   />
-                  <span>1. $DSNT — DeepSnitch AI</span>
+                  <span>1. $DSNT</span>
                 </div>
-                <span className="block text-lg font-normal text-gray-600 mt-2">
+                <div className="text-lg font-normal text-gray-600">
                   (Best Crypto Presale of 2025)
-                </span>
+                </div>
               </h2>
 
               <div className="grid md:grid-cols-3 gap-4 mb-6 text-sm text-gray-700">
@@ -399,7 +377,7 @@ export default function Page() {
             </div>
 
             {/* Mid-Article CTA */}
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl text-white text-center my-12 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl text-white text-center my-8 shadow-lg">
               <div className="text-2xl mb-3">
                 🚨 Still looking for an active presale in 2025?
               </div>
@@ -472,7 +450,7 @@ export default function Page() {
             </div>
 
             {/* Coin #5 - LADYS */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-lg">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-8 shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-3xl font-bold text-gray-900">
                   5. LADYS — The Cult-Favorite That Slipped Through
@@ -516,7 +494,7 @@ export default function Page() {
             </div>
 
             {/* Comparison Table */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-lg">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-8 shadow-lg">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
                 Final Word: Which Presale Is Still Early?
               </h2>
@@ -577,7 +555,7 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Final CTA - UPDATED WITH DEEPSNITCH BRANDING */}
+            {/* Final CTA - WITH DEEPSNITCH BRANDING */}
             <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 p-8 rounded-3xl text-white text-center shadow-2xl relative overflow-hidden">
               {/* Background Pattern/Decoration */}
               <div className="absolute inset-0 opacity-10">
@@ -656,7 +634,7 @@ export default function Page() {
             </div>
 
             {/* Newsletter CTA */}
-            <div className="mt-16 pt-8 border-t border-gray-200">
+            <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="rounded-xl p-8 text-center shadow-md glass">
                 <h3 className="text-2xl font-bold mb-3 text-gray-900">
                   Never Miss the Next Big Presale!

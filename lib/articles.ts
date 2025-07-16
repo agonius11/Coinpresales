@@ -20,7 +20,7 @@ const specialLandingPageArticle: Article = {
   excerpt:
     "Missed $PEPE, $WIF, or $JEET when they were under the radar? Each of these coins launched through a presale, pumped hard, and made early backers rich. But today, only one of them is still in presale — and it's turning heads fast.",
   content: "", // Not used for this special page
-  author: "CoinTrends Research Team",
+  author: "Antoine Marin",
   publishedAt: "2025-07-16",
   updatedAt: "2025-07-16",
   category: "Presales",
