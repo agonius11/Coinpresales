@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import AuthorProfile from "@/components/AuthorProfile";
 import {
   ArrowLeft,
   CheckCircle,
