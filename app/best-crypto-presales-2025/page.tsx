@@ -12,6 +12,8 @@ import {
   Users,
   DollarSign,
 } from "lucide-react";
+import AuthorProfile from "@/components/AuthorProfile";
+import WhyTrustUsDropdown from "@/components/WhyTrustUsDropdown";
 
 export const metadata: Metadata = {
   title:
@@ -102,12 +104,25 @@ export default function Page() {
                 only a few still offer real upside — and just one on this list
                 is still live.
               </p>
+              {/* Author Profile Section - Prominent Position */}
+              <div className="flex items-center justify-center gap-3 mb-8 bg-white/60 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-gray-200 max-w-fit mx-auto">
+                <Image
+                  className="w-16 h-16 rounded-full text-gray-500"
+                  src={"/images/articles/antoine-marin.jpg"}
+                  alt={"Avatar"}
+                  width={20}
+                  height={20}
+                />
+                <span className="text-base font-medium text-gray-600">By</span>
+                <AuthorProfile author="Antoine Marin" size="small" />
+              </div>
             </header>
+            <WhyTrustUsDropdown />
 
             {/* Hero Image  */}
             <div className="relative h-80 md:h-96 lg:h-[28rem] w-full  rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/articles/best-crypto-presale.jpg"
+                src="/images/articles/best-crypto-image.jpg"
                 alt="Best 5 Crypto Presales Comparison - DSNT, PEPE, WIF, JEET, LADYS"
                 fill
                 className="object-cover object-center"
@@ -150,9 +165,9 @@ export default function Page() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 <div className="flex items-center gap-3 mb-2">
                   <Image
-                    src="/images/articles/deepsnitchlogo.svg"
+                    src="/images/articles/dslogo.png"
                     alt="DeepSnitch AI Logo"
-                    width={120}
+                    width={32}
                     height={32}
                     className="h-8"
                   />
