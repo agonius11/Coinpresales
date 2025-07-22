@@ -91,18 +91,14 @@ export default function Page() {
                 <span className="text-orange-500"> One Is Still Early</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 In 2023 and 2024, coins like <strong>$PEPE</strong>,{" "}
                 <strong>$WIF</strong>, and <strong>$VIRTUAL</strong> launched
                 with zero fanfare and turned early buyers into millionaires
-                practically overnight.
-              </p>
-
-              <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
-                In 2025, Bitcoin&apos;s hitting new all-time highs and the
-                appetite for gains is bigger than ever. If you want a shot at
-                100x, you need more than just hype, you need a gem the market
-                hasn&apos;t fully priced in.
+                practically overnight. In 2025, Bitcoin&apos;s hitting new
+                all-time highs and the appetite for gains is bigger than ever.
+                If you want a shot at 100x, you need more than just hype, you
+                need a gem the market hasn&apos;t fully priced in.
               </p>
 
               <p className="text-lg font-semibold text-orange-600 mt-4">
@@ -111,24 +107,30 @@ export default function Page() {
               </p>
 
               {/* Author Profile Section */}
-              <div className="flex items-center justify-center gap-3 mb-8 bg-white/60 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-gray-200 max-w-fit mx-auto">
-                <Image
-                  className="w-16 h-16 rounded-full text-gray-500"
-                  src={"/images/articles/antoine-marin.jpg"}
-                  alt={"Avatar"}
-                  width={20}
-                  height={20}
-                />
-                <span className="text-base font-medium text-gray-600">By</span>
-                <AuthorProfile author="Antoine Marin" size="small" />
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-8">
+                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-gray-200">
+                  <Image
+                    className="w-16 h-16 rounded-full text-gray-500"
+                    src={"/images/articles/antoine-marin.jpg"}
+                    alt={"Avatar"}
+                    width={20}
+                    height={20}
+                  />
+                  <span className="text-base font-medium text-gray-600">
+                    By
+                  </span>
+                  <AuthorProfile author="Antoine Marin" size="small" />
+                </div>
+                <div className="  px-6 pt-7   ">
+                  <WhyTrustUsDropdown />
+                </div>
               </div>
             </header>
-            <WhyTrustUsDropdown />
 
             {/* Hero Image */}
             <div className="relative h-80 md:h-96 lg:h-[28rem] w-full rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/articles/best-crypto-image.jpg"
+                src="/images/articles/mainimage.jpg"
                 alt="Best 5 Crypto Presales Comparison - DSNT, PEPE, WIF, FET, VIRTUAL"
                 fill
                 className="object-cover object-center"
