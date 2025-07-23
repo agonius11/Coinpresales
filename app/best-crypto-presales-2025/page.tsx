@@ -326,7 +326,14 @@ export default function Page() {
             {/* Mid-Article CTA */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl text-white text-center my-8 shadow-lg">
               <div className="text-2xl mb-3">
-                🚨 Still looking for an active presale in 2025?
+                <Image
+                  src="/images/articles/banner.jpg"
+                  alt="DeepSnitch AI - The Most Talked About AI Coin of 2025 - Still Early, Still Cheap - Buy $DSNT Now"
+                  width={1200}
+                  height={300}
+                  className="w-full h-auto object-cover"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                />
               </div>
               <p className="mb-4 text-blue-100">
                 DeepSnitch ($DSNT) is the only project on this list still in
@@ -338,7 +345,14 @@ export default function Page() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-all duration-300"
               >
-                👉 Check out DeepSnitch AI ($DSNT){" "}
+                <Image
+                  src="/images/articles/dslogo.png"
+                  alt="DeepSnitch AI Logo"
+                  width={34}
+                  height={30}
+                  className="h-8 pr-1"
+                />{" "}
+                Check out DeepSnitch AI ($DSNT){" "}
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Link>
             </div>
