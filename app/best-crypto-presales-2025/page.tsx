@@ -324,7 +324,7 @@ export default function Page() {
             </div>
 
             {/* Mid-Article CTA */}
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl text-white text-center my-8 shadow-lg">
+            <div className=" p-6 rounded-2xl text-white text-center my-8 ">
               <div className="text-2xl mb-3">
                 <Image
                   src="/images/articles/banner.jpg"
@@ -335,7 +335,7 @@ export default function Page() {
                   sizes="(max-width: 1280px) 100vw, 1280px"
                 />
               </div>
-              <p className="mb-4 text-blue-100">
+              <p className="mb-4 text-black">
                 DeepSnitch ($DSNT) is the only project on this list still in
                 presale phase with real AI utility.
               </p>
