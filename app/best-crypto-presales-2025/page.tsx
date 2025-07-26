@@ -326,14 +326,21 @@ export default function Page() {
             {/* Mid-Article CTA */}
             <div className=" p-6 rounded-2xl text-white text-center my-8 ">
               <div className="text-2xl mb-3">
-                <Image
-                  src="/images/articles/banner.jpg"
-                  alt="DeepSnitch AI - The Most Talked About AI Coin of 2025 - Still Early, Still Cheap - Buy $DSNT Now"
-                  width={1200}
-                  height={300}
-                  className="w-full h-auto object-cover"
-                  sizes="(max-width: 1280px) 100vw, 1280px"
-                />
+                <Link
+                  href="https://deepsnitch.ai/?utm_source=cointrendsnews&utm_medium=article&utm_campaign=5-best-crypto-presales&utm_term=mid-article-banner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-90 transition-opacity duration-300"
+                >
+                  <Image
+                    src="/images/articles/banner.jpg"
+                    alt="DeepSnitch AI - The Most Talked About AI Coin of 2025 - Still Early, Still Cheap - Buy $DSNT Now"
+                    width={1200}
+                    height={300}
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                  />
+                </Link>
               </div>
               <p className="mb-4 text-black">
                 DeepSnitch ($DSNT) is the only project on this list still in
