@@ -16,47 +16,45 @@ import {
 import AuthorProfile from "@/components/AuthorProfile";
 import WhyTrustUsDropdown from "@/components/WhyTrustUsDropdown";
 
-interface UTMParams {
-  utm_source: string;
-  utm_medium: string;
-  utm_campaign: string;
+interface DynamicUTMParams {
   utm_content: string;
   utm_term: string;
 }
 
 export default function CryptoPresalesClient() {
-  const [utmParams, setUtmParams] = useState<UTMParams>({
-    utm_source: "cointrendsnews",
-    utm_medium: "article", 
-    utm_campaign: "5-best-crypto-presales",
+  const [dynamicUtmParams, setDynamicUtmParams] = useState<DynamicUTMParams>({
     utm_content: "",
     utm_term: ""
   });
 
   useEffect(() => {
-    // Extract UTM parameters from current URL
+    // Extract only utm_content and utm_term from current URL
     const urlParams = new URLSearchParams(window.location.search);
     
-    const extractedParams: UTMParams = {
-      utm_source: "cointrendsnews",
-      utm_medium: "article",
-      utm_campaign: "5-best-crypto-presales", 
+    const extractedParams: DynamicUTMParams = {
       utm_content: urlParams.get("utm_content") || "",
       utm_term: urlParams.get("utm_term") || ""
     };
 
-    setUtmParams(extractedParams);
+    setDynamicUtmParams(extractedParams);
   }, []);
 
-  // Helper function to build DeepSnitch URLs with dynamic UTM parameters
-  const buildDeepSnitchURL = (additionalUtmTerm?: string) => {
+  // Helper function to build DeepSnitch URLs with only dynamic utm_content and utm_term
+  const buildDeepSnitchURL = () => {
     const params = new URLSearchParams({
-      utm_source: utmParams.utm_source,
-      utm_medium: utmParams.utm_medium,
-      utm_campaign: utmParams.utm_campaign,
-      utm_content: utmParams.utm_content,
-      utm_term: additionalUtmTerm || utmParams.utm_term || "crypto-presale"
+      utm_source: "cointrendsnews",
+      utm_medium: "article",
+      utm_campaign: "5-best-crypto-presales"
     });
+
+    // Only add utm_content and utm_term if they exist
+    if (dynamicUtmParams.utm_content) {
+      params.set("utm_content", dynamicUtmParams.utm_content);
+    }
+    
+    if (dynamicUtmParams.utm_term) {
+      params.set("utm_term", dynamicUtmParams.utm_term);
+    }
 
     return `https://deepsnitch.ai/?${params.toString()}`;
   };
@@ -265,7 +263,7 @@ export default function CryptoPresalesClient() {
                 presale. Lock in your position before the next price tier.
               </p>
               <Link
-                href={buildDeepSnitchURL("dsnt-presale")}
+                href={buildDeepSnitchURL()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-orange-500 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -320,7 +318,7 @@ export default function CryptoPresalesClient() {
           <div className=" p-6 rounded-2xl text-white text-center my-8 ">
             <div className="text-2xl mb-3">
               <Link
-                href={buildDeepSnitchURL("mid-article-banner")}
+                href={buildDeepSnitchURL()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:opacity-90 transition-opacity duration-300"
@@ -340,7 +338,7 @@ export default function CryptoPresalesClient() {
               presale phase with real AI utility.
             </p>
             <Link
-              href={buildDeepSnitchURL("mid-article-cta")}
+              href={buildDeepSnitchURL()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-all duration-300"
@@ -471,7 +469,7 @@ export default function CryptoPresalesClient() {
             {/* Enhanced CTA Button with Icons */}
             <div className="relative z-10">
               <Link
-                href={buildDeepSnitchURL("final-cta")}
+                href={buildDeepSnitchURL()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-orange-500 px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg group"
