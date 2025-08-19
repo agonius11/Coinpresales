@@ -29,10 +29,33 @@ const specialLandingPageArticle: Article = {
   isSpecialPage: true, // This flags it as a special page
 };
 
+// German special landing page article
+const specialLandingPageArticleDE: Article = {
+  id: "special-presales-2025-de",
+  title:
+    "Die 5 besten Krypto-Presales, die du jetzt kaufen kannst (einer ist noch in einer sehr frühen Phase)",
+  slug: "beste-krypto-presales-2025",
+  excerpt:
+    "In den Jahren 2023 und 2024 kamen Coins wie $PEPE, $WIF und $VIRTUAL nahezu ohne Aufsehen auf den Markt und machten frühe Käufer teilweise über Nacht zu Millionären. 2025 könnte DeepSnitch ($DSNT) deine nächste Chance auf 100x-Gewinne sein.",
+  content: "", // Not used for this special page
+  author: "Antoine Marin",
+  publishedAt: "2025-08-19",
+  updatedAt: "2025-07-19",
+  category: "Presales",
+  image: "/images/articles/crypto-presales.jpg",
+  featured: true,
+  isSpecialPage: true, // This flags it as a special page
+};
+
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
   // Check if it's the special article first
   if (slug === "best-crypto-presales-2025") {
     return specialLandingPageArticle;
+  }
+
+  // Check if it's the German special article
+  if (slug === "beste-krypto-presales-2025") {
+    return specialLandingPageArticleDE;
   }
 
   try {
@@ -71,11 +94,15 @@ export async function getAllArticleSlugs(): Promise<string[]> {
       .filter((fileName) => fileName.endsWith(".md"))
       .map((fileName) => fileName.replace(/\.md$/, ""));
 
-    // Add the special article slug
-    return ["best-crypto-presales-2025", ...markdownSlugs];
+    // Add the special article slugs
+    return [
+      "best-crypto-presales-2025",
+      "beste-krypto-presales-2025",
+      ...markdownSlugs,
+    ];
   } catch (error) {
     console.error("Error reading articles directory:", error);
-    return ["best-crypto-presales-2025"]; // Still return special article even if directory read fails
+    return ["best-crypto-presales-2025", "beste-krypto-presales-2025"]; // Still return special articles even if directory read fails
   }
 }
 
