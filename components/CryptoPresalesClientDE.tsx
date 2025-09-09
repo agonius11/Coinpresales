@@ -19,27 +19,36 @@ import WhyTrustUsDropdown from "@/components/WhyTrustUsDropdown";
 interface DynamicUTMParams {
   utm_content: string;
   utm_term: string;
+  gclid: string;
+  gbraid: string;
+  wbraid: string;
 }
 
 export default function CryptoPresalesClientDE() {
   const [dynamicUtmParams, setDynamicUtmParams] = useState<DynamicUTMParams>({
     utm_content: "",
     utm_term: "",
+    gclid: "",
+    gbraid: "",
+    wbraid: ""
   });
 
   useEffect(() => {
-    // Extract only utm_content and utm_term from current URL
+    // Extract utm_content, utm_term, and Google Ads parameters from current URL
     const urlParams = new URLSearchParams(window.location.search);
 
     const extractedParams: DynamicUTMParams = {
       utm_content: urlParams.get("utm_content") || "",
       utm_term: urlParams.get("utm_term") || "",
+      gclid: urlParams.get("gclid") || "",
+      gbraid: urlParams.get("gbraid") || "",
+      wbraid: urlParams.get("wbraid") || ""
     };
 
     setDynamicUtmParams(extractedParams);
   }, []);
 
-  // Helper function to build DeepSnitch URLs with only dynamic utm_content and utm_term
+  // Helper function to build DeepSnitch URLs with dynamic utm_content, utm_term, and Google Ads parameters
   const buildDeepSnitchURL = () => {
     const params = new URLSearchParams({
       utm_source: "cointrendsnews",
@@ -54,6 +63,19 @@ export default function CryptoPresalesClientDE() {
 
     if (dynamicUtmParams.utm_term) {
       params.set("utm_term", dynamicUtmParams.utm_term);
+    }
+
+    // Add Google Ads tracking parameters if they exist
+    if (dynamicUtmParams.gclid) {
+      params.set("gclid", dynamicUtmParams.gclid);
+    }
+    
+    if (dynamicUtmParams.gbraid) {
+      params.set("gbraid", dynamicUtmParams.gbraid);
+    }
+    
+    if (dynamicUtmParams.wbraid) {
+      params.set("wbraid", dynamicUtmParams.wbraid);
     }
 
     return `https://deepsnitch.ai/?${params.toString()}`;
