@@ -16,39 +16,28 @@ import {
 import AuthorProfile from "@/components/AuthorProfile";
 import WhyTrustUsDropdown from "@/components/WhyTrustUsDropdown";
 
-interface DynamicUTMParams {
-  utm_content: string;
-  utm_term: string;
-  gclid: string;
-  gbraid: string;
-  wbraid: string;
+interface DynamicParams {
+  [key: string]: string;
 }
 
 export default function CryptoPresalesClientDE() {
-  const [dynamicUtmParams, setDynamicUtmParams] = useState<DynamicUTMParams>({
-    utm_content: "",
-    utm_term: "",
-    gclid: "",
-    gbraid: "",
-    wbraid: ""
-  });
+  const [dynamicParams, setDynamicParams] = useState<DynamicParams>({});
 
   useEffect(() => {
-    // Extract utm_content, utm_term, and Google Ads parameters from current URL
+    // Extract ALL URL parameters from current URL
     const urlParams = new URLSearchParams(window.location.search);
+    
+    const extractedParams: DynamicParams = {};
+    
+    // Get all URL parameters automatically
+    urlParams.forEach((value, key) => {
+      extractedParams[key] = value;
+    });
 
-    const extractedParams: DynamicUTMParams = {
-      utm_content: urlParams.get("utm_content") || "",
-      utm_term: urlParams.get("utm_term") || "",
-      gclid: urlParams.get("gclid") || "",
-      gbraid: urlParams.get("gbraid") || "",
-      wbraid: urlParams.get("wbraid") || ""
-    };
-
-    setDynamicUtmParams(extractedParams);
+    setDynamicParams(extractedParams);
   }, []);
 
-  // Helper function to build DeepSnitch URLs with dynamic utm_content, utm_term, and Google Ads parameters
+  // Helper function to build DeepSnitch URLs with all dynamic parameters
   const buildDeepSnitchURL = () => {
     const params = new URLSearchParams({
       utm_source: "cointrendsnews",
@@ -56,27 +45,12 @@ export default function CryptoPresalesClientDE() {
       utm_campaign: "5-best-crypto-presales-de",
     });
 
-    // Only add utm_content and utm_term if they exist
-    if (dynamicUtmParams.utm_content) {
-      params.set("utm_content", dynamicUtmParams.utm_content);
-    }
-
-    if (dynamicUtmParams.utm_term) {
-      params.set("utm_term", dynamicUtmParams.utm_term);
-    }
-
-    // Add Google Ads tracking parameters if they exist
-    if (dynamicUtmParams.gclid) {
-      params.set("gclid", dynamicUtmParams.gclid);
-    }
-    
-    if (dynamicUtmParams.gbraid) {
-      params.set("gbraid", dynamicUtmParams.gbraid);
-    }
-    
-    if (dynamicUtmParams.wbraid) {
-      params.set("wbraid", dynamicUtmParams.wbraid);
-    }
+    // Add ALL dynamic parameters from the URL (this will include utm_content, utm_term, gclid, gbraid, wbraid, and any future parameters)
+    Object.entries(dynamicParams).forEach(([key, value]) => {
+      if (value && key !== 'utm_source' && key !== 'utm_medium' && key !== 'utm_campaign') {
+        params.set(key, value);
+      }
+    });
 
     return `https://deepsnitch.ai/?${params.toString()}`;
   };
