@@ -146,10 +146,10 @@ export default function PrivacyPolicy() {
               </p>
               <div className="glass p-6 rounded-lg border border-teal-200 glow-teal">
                 <p className="font-semibold text-gray-900 text-lg mb-2">
-                  Coin Trends News
+                  CoinPresales
                 </p>
                 <p className="text-gray-700">
-                  Email: privacy@cointrendsnews.com
+                  Email: privacy@coinpresales.net
                 </p>
                 <p className="text-gray-700">
                   Address: 46 Island Rd Phoenix, New York(NY), 13135

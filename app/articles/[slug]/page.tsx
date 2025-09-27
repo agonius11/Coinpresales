@@ -77,10 +77,10 @@ export default async function ArticlePage({ params }: { params: Params }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Coin Trends News",
+      name: "CoinPresales",
       logo: {
         "@type": "ImageObject",
-        url: "https://cointrendsnews.com/logo.png",
+        url: "https://coinpresales.net/logo.png",
       },
     },
   };

@@ -1,72 +1,72 @@
-import { BarChart3, Cpu, Shield, TrendingUp, Zap, Users } from "lucide-react";
+import { Search, Shield, TrendingUp, Zap, Users, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 const features = [
   {
-    icon: <BarChart3 className="w-10 h-10 text-teal-600" />,
-    title: "In-depth Market Analysis",
+    icon: <Search className="w-10 h-10 text-blue-600" />,
+    title: "Expert Presale Research",
     description:
-      "Our team of veteran analysts provides comprehensive research and actionable insights across the crypto landscape, identifying emerging trends and hidden opportunities.",
+      "Our research team conducts deep due diligence on every presale, analyzing tokenomics, team backgrounds, and project viability to bring you only the most promising opportunities.",
     stats: [
-      { value: "10+", label: "Years Experience" },
-      { value: "24/7", label: "Market Monitoring" },
+      { value: "100+", label: "Projects Analyzed" },
+      { value: "Expert", label: "Due Diligence" },
     ],
-    glow: "glow-teal",
+    glow: "glow-blue",
   },
   {
-    icon: <Cpu className="w-10 h-10 text-purple-600" />,
-    title: "AI-Driven Alpha Signals",
+    icon: <CheckCircle className="w-10 h-10 text-purple-600" />,
+    title: "Verified Opportunities",
     description:
-      "Leveraging advanced AI, we track over 1,000 top-performing crypto wallets in real-time, delivering proprietary signals derived from smart money movements.",
+      "Every presale featured on our platform undergoes rigorous verification. We check smart contracts, audit reports, and team credentials to ensure legitimacy.",
     stats: [
-      { value: "1000+", label: "Wallets Tracked" },
-      { value: "Real-time", label: "Data Processing" },
+      { value: "Verified", label: "Smart Contracts" },
+      { value: "Audited", label: "Projects Only" },
     ],
     glow: "glow-purple",
   },
   {
-    icon: <Shield className="w-10 h-10 text-blue-600" />,
-    title: "Exclusive Insider Network",
+    icon: <TrendingUp className="w-10 h-10 text-green-600" />,
+    title: "Early Access Advantage",
     description:
-      "Gain unparalleled access to a private network of C-suite executives, exchange managers, and industry founders for insights you won't find on public channels.",
+      "Get exclusive early access to the most promising presales before they go public. Many of our featured projects have delivered 10x+ returns to early participants.",
     stats: [
-      { value: "Exclusive", label: "Access" },
-      { value: "C-Suite", label: "Connections" },
+      { value: "10x+", label: "Potential Returns" },
+      { value: "Early", label: "Access" },
     ],
-    glow: "glow-teal",
+    glow: "glow-blue",
   },
   {
-    icon: <TrendingUp className="w-10 h-10 text-green-600" />,
-    title: "Actionable Trading Strategies",
+    icon: <Shield className="w-10 h-10 text-blue-600" />,
+    title: "Risk Assessment",
     description:
-      "Beyond just news, we provide concise and actionable trading strategies, helping you navigate volatility and capitalize on market movements with confidence.",
+      "Each presale comes with a comprehensive risk assessment, highlighting potential red flags and providing clear guidance on investment decisions.",
     stats: [
-      { value: "Proven", label: "Strategies" },
-      { value: "Risk", label: "Management" },
+      { value: "Risk", label: "Ratings" },
+      { value: "Detailed", label: "Analysis" },
     ],
-    glow: "glow-teal",
+    glow: "glow-blue",
   },
   {
     icon: <Zap className="w-10 h-10 text-yellow-600" />,
-    title: "Rapid Breaking News Alerts",
+    title: "Real-Time Updates",
     description:
-      "Receive instant alerts on critical market developments, regulatory changes, and major announcements that impact crypto prices, giving you an edge.",
+      "Stay informed with real-time updates on presale progress, funding milestones, and important developments that could impact your investment decisions.",
     stats: [
-      { value: "Instant", label: "Notifications" },
-      { value: "Critical", label: "Insights" },
+      { value: "Real-time", label: "Updates" },
+      { value: "Live", label: "Progress" },
     ],
     glow: "glow-purple",
   },
   {
     icon: <Users className="w-10 h-10 text-pink-600" />,
-    title: "Community & Support",
+    title: "Community Insights",
     description:
-      "Join a thriving community of serious crypto enthusiasts. Share insights, ask questions, and get support directly from our experts.",
+      "Connect with other presale investors, share experiences, and get insights from our community of successful crypto investors and industry experts.",
     stats: [
-      { value: "Active", label: "Community" },
-      { value: "Expert", label: "Support" },
+      { value: "Active", label: "Investors" },
+      { value: "Proven", label: "Track Record" },
     ],
-    glow: "glow-teal",
+    glow: "glow-blue",
   },
 ];
 
@@ -88,17 +88,15 @@ export default function FeatureSection() {
       <section className="section-padding relative z-10">
         <div className="container-max-w">
           <div className="text-center mb-20">
-            <span className="text-teal-600 font-semibold text-lg uppercase mb-3 block tracking-wider">
+            <span className="text-blue-600 font-semibold text-lg uppercase mb-3 block tracking-wider">
               Why Choose Us?
             </span>
             <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-              Unleash Your{" "}
-              <span className="text-teal-600 glow-teal">Crypto Edge</span>
+              Discover the Best{" "}
+              <span className="text-blue-600 glow-blue">Crypto Presales</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We empower you with actionable intelligence, advanced technology,
-              and exclusive insights to navigate the dynamic crypto markets with
-              confidence.
+              We provide comprehensive research, verification, and early access to the most promising crypto presales before they become mainstream opportunities.
             </p>
           </div>
 
@@ -114,7 +112,7 @@ export default function FeatureSection() {
                     {feature.icon}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-base mb-6">
@@ -127,7 +125,7 @@ export default function FeatureSection() {
                         key={idx}
                         className="bg-gray-50 px-4 py-3 rounded-lg text-center border border-gray-200 group-hover:border-teal-200 group-hover:bg-teal-50 transition-all duration-300"
                       >
-                        <span className="text-lg font-bold text-teal-600 block">
+                        <span className="text-lg font-bold text-blue-600 block">
                           {stat.value}
                         </span>
                         <p className="text-xs text-gray-500 mt-1">
@@ -146,28 +144,25 @@ export default function FeatureSection() {
       {/* Final CTA Section */}
       <section className="section-padding relative">
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-50 via-blue-50 to-purple-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50"></div>
 
         <div className="container-max-w text-center max-w-5xl relative z-10">
-          <div className="glass-strong p-12 md:p-16 rounded-3xl glow-teal">
+          <div className="glass-strong p-12 md:p-16 rounded-3xl glow-blue">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-gray-900">
-              Ready to Get Your{" "}
-              <span className="text-teal-600">Daily Alpha?</span>
+              Ready to Find Your{" "}
+              <span className="text-blue-600">Next 100x?</span>
             </h2>
             <p className="text-lg md:text-xl mb-10 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our experienced research team analyzes over 1,000 data points
-              daily, using AI to filter out what truly matters. The result? A
-              concise email you can read in just 3 minutes.
+              Our expert team analyzes hundreds of presale opportunities, conducting thorough due diligence to bring you only the most promising projects with real potential for massive returns.
             </p>
             <Link
-              href="/#newsletter"
+              href="/best-crypto-presales-2025"
               className="btn-primary text-xl px-12 py-4 transform hover:scale-105 shadow-2xl"
             >
-              Start Your Free Subscription
+              Explore Best Presales 2025
             </Link>
             <p className="text-sm text-gray-500 mt-6">
-              Join 10,000+ crypto enthusiasts • No spam, ever • Unsubscribe
-              anytime
+              Trusted by thousands of investors • Expert research • Early access opportunities
             </p>
           </div>
         </div>

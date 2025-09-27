@@ -8,37 +8,37 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Coin Trends News - Daily Crypto Insights & News",
+  title: "CoinPresales - Best Crypto Presales 2025",
   description:
-    "Get the alpha you won't find in the news. Daily crypto insights, market analysis, and exclusive trading tips delivered to your inbox.",
+    "Discover the most promising crypto presales before they launch. Get early access to verified presale opportunities with expert research.",
   keywords:
-    "crypto news, cryptocurrency, bitcoin, ethereum, blockchain, crypto analysis, trading insights",
-  authors: [{ name: "cointrends news" }],
-  creator: "cointrends news",
-  publisher: "Coin Trends News",
+    "crypto presales, cryptocurrency presales, bitcoin presales, ethereum presales, blockchain presales, presale opportunities, early crypto investments",
+  authors: [{ name: "CoinPresales" }],
+  creator: "CoinPresales",
+  publisher: "CoinPresales",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cointrends.news",
-    siteName: "Coin Trends News",
-    title: "Coin Trends News - Daily Crypto Insights & News",
+    url: "https://coinpresales.net",
+    siteName: "CoinPresales",
+    title: "CoinPresales - Best Crypto Presales 2025",
     description:
-      "Get the alpha you won't find in the news. Daily crypto insights delivered to your inbox.",
+      "Discover the most promising crypto presales before they launch. Get early access to verified opportunities.",
     images: [
       {
-        url: "https://cointrends.news/og-image.jpg",
+        url: "https://coinpresales.net/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Coin Trends News",
+        alt: "CoinPresales",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coin Trends News - Daily Crypto Insights & News",
-    description: "Get the alpha you won't find in the news.",
-    images: ["https://cointrends.news/twitter-image.jpg"],
-    creator: "@CoinTrendsNews",
+    title: "CoinPresales - Best Crypto Presales 2025",
+    description: "Discover the best crypto presales before they launch.",
+    images: ["https://coinpresales.net/twitter-image.jpg"],
+    creator: "@CoinPresales",
   },
   robots: {
     index: true,

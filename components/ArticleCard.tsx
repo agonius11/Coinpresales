@@ -86,7 +86,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         </div>
 
         <div className="p-6 md:p-7">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug line-clamp-2 group-hover:text-teal-600 transition-colors duration-300">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
             {article.title}
           </h3>
           <p className="text-gray-600 mb-4 text-base line-clamp-3 leading-relaxed">
@@ -104,7 +104,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
             showModal={true}
           />
           <div className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-teal-500" />
+            <Clock className="w-4 h-4 text-blue-500" />
             <span>{publishedDate}</span>
           </div>
         </div>

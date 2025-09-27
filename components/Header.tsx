@@ -35,26 +35,26 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
             <h1 className="text-2xl font-extrabold text-gray-900">
-              <span className="text-teal-600">COIN</span>TRENDS NEWS
+              <span className="text-blue-600">COIN</span>PRESALES
             </h1>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
             >
               Home
             </Link>
             <Link
               href="/articles"
-              className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
             >
               Articles
             </Link>
             <Link
               href="/#features"
-              className="text-gray-700 hover:text-teal-600 font-medium transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
             >
               Features
             </Link>
@@ -67,7 +67,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none transition-colors duration-300"
+            className="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none transition-colors duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -86,21 +86,21 @@ export default function Header() {
           <div className="px-4 pt-4 pb-6 space-y-3">
             <Link
               href="/"
-              className="block px-3 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg text-lg font-medium transition-all duration-300"
+              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg text-lg font-medium transition-all duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/articles"
-              className="block px-3 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg text-lg font-medium transition-all duration-300"
+              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg text-lg font-medium transition-all duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Articles
             </Link>
             <Link
               href="/#features"
-              className="block px-3 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg text-lg font-medium transition-all duration-300"
+              className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg text-lg font-medium transition-all duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Features

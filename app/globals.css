@@ -103,11 +103,11 @@
   }
 
   .prose a {
-    @apply text-teal-600 hover:text-teal-700 underline transition duration-200;
+    @apply text-blue-600 hover:text-blue-700 underline transition duration-200;
   }
 
   .prose blockquote {
-    @apply border-l-4 border-teal-400 pl-6 italic my-6 text-gray-700 bg-teal-50 py-3 px-4 rounded-r-lg;
+    @apply border-l-4 border-blue-400 pl-6 italic my-6 text-gray-700 bg-blue-50 py-3 px-4 rounded-r-lg;
   }
 
   .prose code {
@@ -128,11 +128,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-semibold bg-teal-600 hover:bg-teal-700 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-semibold bg-blue-600 hover:bg-blue-700 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-teal-600 border border-teal-600 font-semibold hover:bg-teal-600 hover:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white;
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-full text-blue-600 border border-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white;
   }
 
   .article-badge {
@@ -179,7 +179,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(14, 165, 233, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.2);
   }
 
   /* Category badges with different colors */
@@ -188,7 +188,7 @@
     @apply bg-orange-500 text-white;
   }
   .badge-crypto {
-    @apply bg-teal-500 text-white;
+    @apply bg-blue-500 text-white;
   }
 
   .badge-defi {
@@ -220,8 +220,12 @@
   }
 
   /* Glow effects for light theme */
+  .glow-blue {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+  }
+
   .glow-teal {
-    box-shadow: 0 0 30px rgba(14, 165, 233, 0.15);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
   }
 
   .glow-purple {
@@ -244,19 +248,19 @@
       135deg,
       #f0f9ff 0%,
       #e0f2fe 25%,
-      #f0fdfa 50%,
-      #f0fdf4 75%,
-      #fefce8 100%
+      #dbeafe 50%,
+      #e0f2fe 75%,
+      #f0f9ff 100%
     );
   }
 
   .hero-light-bg {
     background: linear-gradient(
       135deg,
-      #0891b2 0%,
-      #0d9488 25%,
-      #059669 50%,
-      #0891b2 100%
+      #1e40af 0%,
+      #1d4ed8 25%,
+      #2563eb 50%,
+      #1e40af 100%
     );
   }
   [role="dialog"] {

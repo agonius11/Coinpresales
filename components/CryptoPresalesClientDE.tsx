@@ -40,7 +40,7 @@ export default function CryptoPresalesClientDE() {
   // Helper function to build DeepSnitch URLs with all dynamic parameters
   const buildDeepSnitchURL = () => {
     const params = new URLSearchParams({
-      utm_source: "cointrendsnews",
+      utm_source: "coinpresales",
       utm_medium: "article",
       utm_campaign: "5-best-crypto-presales-de",
     });

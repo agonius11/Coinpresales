@@ -10,7 +10,9 @@ interface ArticleSearchClientProps {
   articles: Article[];
 }
 
-export default function ArticleSearchClient({ articles }: ArticleSearchClientProps) {
+export default function ArticleSearchClient({
+  articles,
+}: ArticleSearchClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredArticles = useMemo(() => {
@@ -19,11 +21,12 @@ export default function ArticleSearchClient({ articles }: ArticleSearchClientPro
     }
 
     const query = searchQuery.toLowerCase();
-    return articles.filter((article) =>
-      article.title.toLowerCase().includes(query) ||
-      article.excerpt.toLowerCase().includes(query) ||
-      article.category.toLowerCase().includes(query) ||
-      article.author.toLowerCase().includes(query)
+    return articles.filter(
+      (article) =>
+        article.title.toLowerCase().includes(query) ||
+        article.excerpt.toLowerCase().includes(query) ||
+        article.category.toLowerCase().includes(query) ||
+        article.author.toLowerCase().includes(query)
     );
   }, [articles, searchQuery]);
 
@@ -41,7 +44,7 @@ export default function ArticleSearchClient({ articles }: ArticleSearchClientPro
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               All Crypto{" "}
-              <span className="text-teal-600 glow-teal">Insights</span>
+              <span className="text-blue-600 glow-blue">Insights</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               Explore our comprehensive collection of articles, from in-depth
@@ -62,7 +65,8 @@ export default function ArticleSearchClient({ articles }: ArticleSearchClientPro
               </div>
               {searchQuery && (
                 <p className="text-sm text-gray-600 mt-3">
-                  {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''} found
+                  {filteredArticles.length} article
+                  {filteredArticles.length !== 1 ? "s" : ""} found
                   {searchQuery && ` for "${searchQuery}"`}
                 </p>
               )}
@@ -108,7 +112,8 @@ export default function ArticleSearchClient({ articles }: ArticleSearchClientPro
                   No articles found
                 </h2>
                 <p className="text-gray-600 mb-8 text-lg">
-                  No articles match your search for &quot;{searchQuery}&quot;. Try different keywords or browse all articles.
+                  No articles match your search for &quot;{searchQuery}&quot;.
+                  Try different keywords or browse all articles.
                 </p>
                 <button
                   onClick={() => setSearchQuery("")}
@@ -137,9 +142,9 @@ export default function ArticleSearchClient({ articles }: ArticleSearchClientPro
                   No articles found yet.
                 </h2>
                 <p className="text-gray-600 mb-8 text-lg">
-                  We&apos;re working hard to bring you the latest crypto insights.
-                  Subscribe to our newsletter to be notified when we publish new
-                  content!
+                  We&apos;re working hard to bring you the latest crypto
+                  insights. Subscribe to our newsletter to be notified when we
+                  publish new content!
                 </p>
                 <Link
                   href="/#newsletter"

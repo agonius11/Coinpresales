@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <h3 className="text-3xl font-extrabold mb-6 text-white">
-              <span className="text-teal-400">COIN</span>TRENDS NEWS
+              <span className="text-blue-400">COIN</span>PRESALES
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed max-w-md mb-8">
               Your unfair advantage in crypto — daily unfiltered insights, news,
@@ -23,7 +23,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Home
                 </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/articles"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   All Articles
                 </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#features"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Features
                 </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#newsletter"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Subscribe
                 </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Privacy Policy
                 </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Terms & Conditions
                 </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Affiliate Disclosure
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-teal-400 transition-colors duration-300 text-lg"
+                  className="hover:text-blue-400 transition-colors duration-300 text-lg"
                 >
                   Sitemap
                 </Link>
@@ -100,14 +100,14 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <p className="text-gray-500 text-sm">
-                © 2025 Coin Trends News. All Rights Reserved.
+                © 2025 CoinPresales. All Rights Reserved.
               </p>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-500 text-sm">
                 Designed & Developed By{" "}
-                <span className="text-teal-400 font-semibold">
-                  Coin Trends Team
+                <span className="text-blue-400 font-semibold">
+                  CoinPresales Team
                 </span>
               </p>
             </div>

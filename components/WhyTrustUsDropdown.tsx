@@ -47,17 +47,17 @@ export default function WhyTrustUsDropdown() {
           >
             <div className="pt-4">
               <p className="text-gray-700 leading-relaxed text-sm">
-                Cointrends.news was founded by a team of cryptocurrency
+                CoinPresales.net was founded by a team of cryptocurrency
                 enthusiasts and experts dedicated to helping investors navigate
                 the ever-evolving world of digital assets. Our platform provides
-                in-depth, up-to-date analysis of the latest crypto tokens,
-                presales, and trends. We prioritize transparency, reliability,
+                in-depth, up-to-date analysis of the latest crypto presales,
+                opportunities, and trends. We prioritize transparency, reliability,
                 and unbiased reporting to ensure that all the information you
                 receive is accurate, well-researched, and objective. Our
                 editorial team conducts thorough investigations using trusted
-                sources and expert insights to compare and evaluate tokens,
-                providing you with the most relevant and timely information. At
-                Cointrends.news, we believe in empowering investors to make
+                sources and expert insights to compare and evaluate presale
+                opportunities, providing you with the most relevant and timely information. At
+                CoinPresales.net, we believe in empowering investors to make
                 informed decisions while keeping safety, security, and risk
                 management at the forefront. Please note, all content is for
                 informational purposes only and should not be considered as

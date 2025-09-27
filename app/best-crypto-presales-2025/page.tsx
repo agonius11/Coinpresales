@@ -3,7 +3,7 @@ import CryptoPresalesClient from "@/components/CryptoPresalesClient";
 
 export const metadata: Metadata = {
   title:
-    "5 Best Crypto Presales to Buy Now (One Is Still Early) | CoinTrends News",
+    "5 Best Crypto Presales to Buy Now (One Is Still Early) | CoinPresales",
   description:
     "In 2023-2024, $PEPE, $WIF, and $VIRTUAL turned early buyers into millionaires. In 2025, DeepSnitch ($DSNT) might be your next shot at 100x gains.",
   keywords:
@@ -41,11 +41,11 @@ export default function Page() {
     dateModified: "2025-07-21",
     author: {
       "@type": "Organization",
-      name: "CoinTrends Research Team",
+      name: "CoinPresales Research Team",
     },
     publisher: {
       "@type": "Organization",
-      name: "Coin Trends News",
+      name: "CoinPresales",
     },
   };
 

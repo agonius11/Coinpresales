@@ -17,14 +17,14 @@ export default async function Home() {
         <section className="section-padding relative light-gradient-bg">
           {/* Background elements */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
             <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
           </div>
 
           <div className="container-max-w relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Featured <span className="text-teal-600">Posts</span>
+                Featured <span className="text-blue-600">Posts</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Stay ahead of the crypto game with our latest insights,
@@ -42,7 +42,7 @@ export default async function Home() {
             <div className="text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-white font-semibold bg-teal-600 hover:bg-teal-700 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white text-lg"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-white font-semibold bg-blue-600 hover:bg-blue-700 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white text-lg"
               >
                 Explore More Articles
                 <ArrowRight className="ml-2 w-5 h-5" />
