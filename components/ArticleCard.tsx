@@ -46,69 +46,78 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     : `/articles/${article.slug}`;
 
   return (
-    <article
-      className={`rounded-2xl overflow-hidden card-hover-effect light-card group ${
-        article.isSpecialPage
-          ? "ring-2 ring-orange-400 ring-opacity-60 shadow-xl"
-          : ""
-      }`}
-    >
-      {/* Article content link */}
+    <article className="group relative">
       <Link href={linkPath} className="block">
-        <div className="relative h-52 w-full overflow-hidden">
+        <div className="relative overflow-hidden rounded-3xl bg-white border-2 border-gray-200 hover:border-orange-300 hover:shadow-2xl hover:shadow-orange-100/50 transition-all duration-500">
           {/* Special HOT badge for landing page */}
           {article.isSpecialPage && (
             <div className="absolute top-4 right-4 z-10">
-              <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 animate-pulse shadow-lg">
-                <Zap className="w-3 h-3" />
-                HOT
-              </span>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full blur-md opacity-75 animate-pulse"></div>
+                <span className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                  <Zap className="w-3.5 h-3.5" />
+                  HOT
+                </span>
+              </div>
             </div>
           )}
 
-          <Image
-            src={article.image || "/images/placeholder.jpg"}
-            alt={article.title}
-            fill
-            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
-          <span
-            className={`article-badge absolute top-4 left-4 ${badgeStyle} rounded-full px-4 py-1.5 text-sm font-semibold shadow-lg ${
-              article.isSpecialPage
-                ? "bg-orange-500 text-white border-2 border-white"
-                : ""
-            }`}
-          >
-            {article.category}
-          </span>
-        </div>
+          {/* Image section */}
+          <div className="relative h-56 w-full overflow-hidden">
+            <Image
+              src={article.image || "/images/placeholder.jpg"}
+              alt={article.title}
+              fill
+              className="object-cover transition-all duration-700 ease-out group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent"></div>
 
-        <div className="p-6 md:p-7">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
-            {article.title}
-          </h3>
-          <p className="text-gray-600 mb-4 text-base line-clamp-3 leading-relaxed">
-            {article.excerpt}
-          </p>
-        </div>
-      </Link>
+            {/* Category badge */}
+            <div className="absolute bottom-4 left-4">
+              <span
+                className={`${badgeStyle} px-4 py-2 text-xs font-bold rounded-xl backdrop-blur-md shadow-lg`}
+              >
+                {article.category}
+              </span>
+            </div>
+          </div>
 
-      {/* Author section outside the article link to prevent nested links */}
-      <div className="px-6 md:px-7 pb-6 md:pb-7">
-        <div className="flex justify-between items-center text-sm text-gray-500 pt-4 border-t border-gray-200">
-          <AuthorProfile
-            author={article.author}
-            size="small"
-            showModal={true}
-          />
-          <div className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-blue-500" />
-            <span>{publishedDate}</span>
+          {/* Content section */}
+          <div className="p-6 space-y-4">
+            {/* Title */}
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-600 group-hover:to-sky-600 transition-all duration-300">
+              {article.title}
+            </h3>
+
+            {/* Excerpt */}
+            <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+              {article.excerpt}
+            </p>
+
+            {/* Footer */}
+            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+              <AuthorProfile
+                author={article.author}
+                size="small"
+                showModal={true}
+              />
+              <div className="flex items-center gap-2 text-xs text-gray-500">
+                <Clock className="w-3.5 h-3.5" />
+                <span>{publishedDate}</span>
+              </div>
+            </div>
+
+            {/* Read more indicator */}
+            <div className="flex items-center gap-2 text-orange-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span>Read article</span>
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </article>
   );
 }

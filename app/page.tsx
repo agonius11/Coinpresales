@@ -14,25 +14,33 @@ export default async function Home() {
 
       {/* Featured Posts Section */}
       {latestArticles.length > 0 ? (
-        <section className="section-padding relative light-gradient-bg">
+        <section className="section-padding relative bg-gradient-to-b from-white via-orange-50/30 to-sky-50/30">
           {/* Background elements */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute inset-0">
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-orange-200/20 rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-sky-200/20 rounded-full blur-[120px]"></div>
           </div>
 
           <div className="container-max-w relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Featured <span className="text-blue-600">Posts</span>
+            <div className="text-center mb-16 space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/10 to-sky-500/10 border border-orange-300/30">
+                <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
+                <span className="text-sm text-gray-700 font-medium">Latest Insights</span>
+              </div>
+
+              <h2 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight">
+                Featured{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-sky-600 to-orange-600">
+                  Articles
+                </span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Stay ahead of the crypto game with our latest insights,
-                analysis, and breaking news from the world of digital assets.
+
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                Stay ahead with our expert analysis and breaking news from the crypto presale world.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {latestArticles.map((article) => (
                 <ArticleCard key={article.id} article={article} />
               ))}
@@ -42,18 +50,18 @@ export default async function Home() {
             <div className="text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-white font-semibold bg-blue-600 hover:bg-blue-700 transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white text-lg"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-sky-600 text-white font-bold text-lg hover:shadow-2xl hover:shadow-orange-500/50 transform hover:scale-105 transition-all duration-300"
               >
                 Explore More Articles
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
         </section>
       ) : (
-        <section className="section-padding light-gradient-bg">
+        <section className="section-padding bg-gradient-to-b from-white to-orange-50/30">
           <div className="container-max-w text-center">
-            <div className="glass-strong p-12 rounded-2xl max-w-2xl mx-auto glow-teal">
+            <div className="bg-white border-2 border-orange-200 p-12 rounded-3xl max-w-2xl mx-auto shadow-xl">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 No Articles Yet
               </h2>
@@ -64,7 +72,7 @@ export default async function Home() {
               </p>
               <Link
                 href="/#newsletter"
-                className="btn-primary text-lg px-8 py-3"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-sky-600 text-white font-bold text-lg hover:shadow-2xl hover:shadow-orange-500/50 transform hover:scale-105 transition-all duration-300"
               >
                 Subscribe Now
               </Link>
