@@ -8,20 +8,20 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CoinPresales - Best Crypto Presales 2025",
+  title: "CryptoPresales - Best Crypto Presales 2025",
   description:
     "Discover the most promising crypto presales before they launch. Get early access to verified presale opportunities with expert research.",
   keywords:
     "crypto presales, cryptocurrency presales, bitcoin presales, ethereum presales, blockchain presales, presale opportunities, early crypto investments",
-  authors: [{ name: "CoinPresales" }],
-  creator: "CoinPresales",
-  publisher: "CoinPresales",
+  authors: [{ name: "CryptoPresales" }],
+  creator: "CryptoPresales",
+  publisher: "CryptoPresales",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://coinpresales.net",
-    siteName: "CoinPresales",
-    title: "CoinPresales - Best Crypto Presales 2025",
+    siteName: "CryptoPresales",
+    title: "CryptoPresales - Best Crypto Presales 2025",
     description:
       "Discover the most promising crypto presales before they launch. Get early access to verified opportunities.",
     images: [
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
         url: "https://coinpresales.net/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CoinPresales",
+        alt: "CryptoPresales",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CoinPresales - Best Crypto Presales 2025",
+    title: "CryptoPresales - Best Crypto Presales 2025",
     description: "Discover the best crypto presales before they launch.",
     images: ["https://coinpresales.net/twitter-image.jpg"],
-    creator: "@CoinPresales",
+    creator: "@CryptoPresales",
   },
   robots: {
     index: true,

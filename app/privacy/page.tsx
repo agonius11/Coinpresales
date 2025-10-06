@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="glass p-6 rounded-lg border border-teal-200 glow-teal">
                 <p className="font-semibold text-gray-900 text-lg mb-2">
-                  CoinPresales
+                  CryptoPresales
                 </p>
                 <p className="text-gray-700">
                   Email: privacy@coinpresales.net

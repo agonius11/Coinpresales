@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Die 5 besten Krypto-Presales, die du jetzt kaufen kannst (einer ist noch in einer sehr frühen Phase) | CoinPresales",
+    "Die 5 besten Krypto-Presales, die du jetzt kaufen kannst (einer ist noch in einer sehr frühen Phase) | CryptoPresales",
   description:
     "In den Jahren 2023 und 2024 kamen Coins wie $PEPE, $WIF und $VIRTUAL nahezu ohne Aufsehen auf den Markt und machten frühe Käufer teilweise über Nacht zu Millionären. 2025 könnte DeepSnitch ($DSNT) deine nächste Chance auf 100x-Gewinne sein.",
   keywords:
@@ -44,11 +44,11 @@ export default function Page() {
     dateModified: "2025-08-19",
     author: {
       "@type": "Organization",
-      name: "CoinPresales Research Team",
+      name: "CryptoPresales Research Team",
     },
     publisher: {
       "@type": "Organization",
-      name: "Coin Trends News",
+      name: "CryptoPresales",
     },
   };
 

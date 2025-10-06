@@ -77,7 +77,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "CoinPresales",
+      name: "CryptoPresales",
       logo: {
         "@type": "ImageObject",
         url: "https://coinpresales.net/logo.png",

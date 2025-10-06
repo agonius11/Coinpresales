@@ -28,7 +28,7 @@ export default function Footer() {
                 </div>
                 <h3 className="text-2xl font-black tracking-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                    COIN
+                    CRYPTO
                   </span>
                   <span className="text-gray-900">PRESALES</span>
                 </h3>
@@ -157,12 +157,12 @@ export default function Footer() {
         <div className="py-8 border-t-2 border-orange-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              © 2025 CoinPresales. All rights reserved.
+              © 2025 CryptoPresales. All rights reserved.
             </p>
             <p className="text-gray-600 text-sm">
               Built with passion by{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-sky-600 font-semibold">
-                CoinPresales Team
+                CryptoPresales Team
               </span>
             </p>
           </div>

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | CoinPresales",
+  title: "Terms of Service | CryptoPresales",
   description:
-    "Terms and conditions for using CoinPresales services and subscribing to our cryptocurrency newsletter.",
+    "Terms and conditions for using CryptoPresales services and subscribing to our cryptocurrency newsletter.",
 };
 
 export default function TermsOfService() {
@@ -31,8 +31,8 @@ export default function TermsOfService() {
                 1. Agreement to Terms
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                By accessing or using CoinPresales (Service), operated by
-                CoinPresales (we, us, or our), you agree to be bound by
+                By accessing or using CryptoPresales (Service), operated by
+                CryptoPresales (we, us, or our), you agree to be bound by
                 these Terms of Service (Terms). If you disagree with any part of
                 these terms, you do not have permission to access the Service.
               </p>
@@ -43,7 +43,7 @@ export default function TermsOfService() {
                 2. Description of Service
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                CoinPresales provides cryptocurrency news, analysis, and
+                CryptoPresales provides cryptocurrency news, analysis, and
                 insights through:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
@@ -63,7 +63,7 @@ export default function TermsOfService() {
                   IMPORTANT NOTICE:
                 </p>
                 <p className="text-gray-700 mb-4">
-                  CoinPresales provides information and analysis about
+                  CryptoPresales provides information and analysis about
                   cryptocurrency markets for educational and informational
                   purposes only. Nothing on this website constitutes:
                 </p>
@@ -135,7 +135,7 @@ export default function TermsOfService() {
               </p>
               <div className="glass p-6 rounded-lg border border-teal-200 glow-teal">
                 <p className="font-semibold text-gray-900 text-lg mb-2">
-                  CoinPresales
+                  CryptoPresales
                 </p>
                 <p className="text-gray-700">Email: legal@coinpresales.net</p>
                 <p className="text-gray-700">

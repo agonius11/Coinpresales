@@ -41,7 +41,7 @@ export default function Header() {
               </div>
             </div>
             <h1 className="text-2xl font-black tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">COIN</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">CRYPTO</span>
               <span className="text-gray-900">PRESALES</span>
             </h1>
           </Link>
