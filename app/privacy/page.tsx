@@ -149,7 +149,7 @@ export default function PrivacyPolicy() {
                   CryptoPresales
                 </p>
                 <p className="text-gray-700">
-                  Email: privacy@coinpresales.net
+                  Email: privacy@cryptopresales.net
                 </p>
                 <p className="text-gray-700">
                   Address: 46 Island Rd Phoenix, New York(NY), 13135

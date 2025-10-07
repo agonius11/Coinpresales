@@ -80,7 +80,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
       name: "CryptoPresales",
       logo: {
         "@type": "ImageObject",
-        url: "https://coinpresales.net/logo.png",
+        url: "https://cryptopresales.net/logo.png",
       },
     },
   };

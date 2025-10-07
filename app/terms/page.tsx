@@ -137,7 +137,7 @@ export default function TermsOfService() {
                 <p className="font-semibold text-gray-900 text-lg mb-2">
                   CryptoPresales
                 </p>
-                <p className="text-gray-700">Email: legal@coinpresales.net</p>
+                <p className="text-gray-700">Email: legal@cryptopresales.net</p>
                 <p className="text-gray-700">
                   Address: 46 Island Rd Phoenix, New York(NY), 13135
                 </p>

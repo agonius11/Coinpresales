@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://coinpresales.net",
+    url: "https://cryptopresales.net",
     siteName: "CryptoPresales",
     title: "CryptoPresales - Best Crypto Presales 2025",
     description:
       "Discover the most promising crypto presales before they launch. Get early access to verified opportunities.",
     images: [
       {
-        url: "https://coinpresales.net/og-image.jpg",
+        url: "https://cryptopresales.net/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "CryptoPresales",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CryptoPresales - Best Crypto Presales 2025",
     description: "Discover the best crypto presales before they launch.",
-    images: ["https://coinpresales.net/twitter-image.jpg"],
+    images: ["https://cryptopresales.net/twitter-image.jpg"],
     creator: "@CryptoPresales",
   },
   robots: {
